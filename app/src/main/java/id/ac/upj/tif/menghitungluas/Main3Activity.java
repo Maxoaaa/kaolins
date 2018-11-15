@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
 
 public class Main3Activity extends AppCompatActivity {
     TextView txtHasil, txtHasil2;
-    EditText txtManning, txtKemiringan,txtLebarSaluran,txtKedalamanSaluran, txtRangeElevasi;
+    EditText txtManning, txtKemiringan,txtLebarSaluran,txtKedalamanSaluran, txtRangeElevasi, txtkemiringantalud;
     Button btnHitung,btnNext;
 
     @Override
@@ -28,6 +28,7 @@ public class Main3Activity extends AppCompatActivity {
         txtLebarSaluran = findViewById(R.id.txtLebarSaluran);
         txtKedalamanSaluran = findViewById(R.id.txtKedalamanSaluran);
         txtRangeElevasi = findViewById(R.id.txtRangeElevasi);
+        txtkemiringantalud = findViewById(R.id.txtkemiringantalud);
         txtHasil = findViewById(R.id.txtHasil);
         txtHasil2 = findViewById(R.id.txtHasil2);
         btnHitung = findViewById(R.id.btnHitung);
