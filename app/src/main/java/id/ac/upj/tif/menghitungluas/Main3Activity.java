@@ -186,7 +186,7 @@ public class Main3Activity extends AppCompatActivity {
                 double B, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10;
                 double Qs, V1, V2, V3, V4, V5, V6, V7,V8,V9,V10;
                 double E1, E2, E3, E4, E5, E6,E7,E8,E9,E10;
-                double deltaE2, deltaE3, deltaE4, deltaE5, deltaE6,deltaE7,deltaE8,deltaE9,deltaE10;
+                double deltaE2 = 0, deltaE3, deltaE4, deltaE5, deltaE6,deltaE7,deltaE8,deltaE9,deltaE10;
                 double Rm1, Rm2, Rm3, Rm4, Rm5, Rm6,Rm7,Rm8,Rm9,Rm10;
                 double n,Sf1, Sf2, Sf3, Sf4, Sf5, Sf6,Sf7,Sf8,Sf9,Sf10;
                 double So, dl2, dl3, dl4, dl5 , dl6,dl7,dl8,dl9,dl10;
@@ -210,7 +210,6 @@ public class Main3Activity extends AppCompatActivity {
 
                 Rm1 = A1 / (2 * y1  + B );
                 Rm2 = A2 / (2 * y2  + B );
-                Rm3 = A3 / (2 * y3  + B );
                 n = Double.parseDouble(txtManning.getText().toString());
 
                 double R2per3_1 = Math.cbrt(Math.pow(Rm1,2));
@@ -221,12 +220,9 @@ public class Main3Activity extends AppCompatActivity {
                 double Sf2temp = (n * Qs) / (A2 * R2per3_2);
                 Sf2 = Math.pow(Sf2temp,2);
 
-                double R2per3_3 = Math.cbrt(Math.pow(Rm3,2));
-                double Sf3temp = (n * Qs) / (A3 * R2per3_3);
-                Sf3 = Math.pow(Sf3temp,2);
 
                 double rataSf2 = (Sf1 + Sf2) /2;
-                double rataSf3 = (Sf2 + Sf3) /2;
+                /*double rataSf3 = (Sf2 + Sf3) /2;*/
 
                 So = Double.parseDouble(txtKemiringan.getText().toString());
 
@@ -248,9 +244,9 @@ public class Main3Activity extends AppCompatActivity {
                 Bundle e = new Bundle();
                 //untuk menyimpan profil muka air
                 String hasil = new Double(Qc1).toString();
-                String hasil2 = new Double(H).toString();
+               // String hasil2 = new Double(H).toString();
                 e.putString("ProfilMukaAir", hasil);
-                e.putString("Haha", hasil2);
+                //e.putString("Haha", hasil2);
                 intent.putExtras(e);
                 //memulai Activity ketiga
                 btnNext.setOnClickListener(new View.OnClickListener() {
