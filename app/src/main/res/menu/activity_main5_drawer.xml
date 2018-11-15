@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_hitung"
+            android:icon="@drawable/ic_library_add_black_24dp"
+            android:title="Perhitungan" />
+        <item
+            android:id="@+id/nav_intenhu"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Intensitas Hujan" />
+        <item
+            android:id="@+id/nav_banjir"
+            android:icon="@drawable/ic_pool_black_24dp"
+            android:title="Debit Banjir Maksimum" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_aspect_ratio_black_24dp"
+            android:title="Profil Muka Air" />
+        <item
+            android:id="@+id/nav_volume"
+            android:icon="@drawable/ic_battery_90_black_24dp"
+            android:title="Volume Tampung" />
+    </group>
+
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_tentang"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="Tentang" />
+        </menu>
+    </item>
+
+</menu>

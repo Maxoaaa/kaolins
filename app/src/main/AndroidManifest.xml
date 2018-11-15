@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.ac.upj.tif.menghitungluas">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Kaolin"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".Splashscreen"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main5Activity"
+            android:label="Kaolin"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Intensitas Hujan"
+            android:parentActivityName=".Main5Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main5Activity" />
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="Debit Banjir Maksimum"
+            android:parentActivityName=".Main5Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main5Activity" />
+        </activity>
+        <activity
+            android:name=".Main3Activity"
+            android:label="Profil Muka Air"
+            android:parentActivityName=".Main5Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main5Activity" />
+        </activity>
+        <activity
+            android:name=".Main4Activity"
+            android:label="Volume"
+            android:parentActivityName=".Main5Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main5Activity" />
+        </activity>
+        <activity android:name=".Main6Activity"
+            android:label="Curah Hujan"
+            android:parentActivityName=".Main5Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main5Activity" />
+        </activity>
+    </application>
+
+</manifest>
