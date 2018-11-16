@@ -26,6 +26,7 @@ public class Main3Activity extends AppCompatActivity {
         debit.setText(b.getCharSequence("Debitku"));
 
         txtKedalamanSungai = findViewById(R.id.txtKedalamanSungai);
+        txtManning = findViewById(R.id.txtManning);
         txtLebarSaluran = findViewById(R.id.txtLebarSaluran);
         txtso = findViewById(R.id.txtso);
         txtKoefisienKecepatan = findViewById(R.id.txtKoefisienKecepatan);
@@ -182,20 +183,17 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 double g = 9.80665, range;
-                double y1, y2, y3, y4, y5, y6, y7, y8, y9, y10;
-                double B, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10;
-                double Qs, V1, V2, V3, V4, V5, V6, V7,V8,V9,V10;
-                double E1, E2, E3, E4, E5, E6,E7,E8,E9,E10;
-                double deltaE2 = 0, deltaE3, deltaE4, deltaE5, deltaE6,deltaE7,deltaE8,deltaE9,deltaE10;
-                double Rm1, Rm2, Rm3, Rm4, Rm5, Rm6,Rm7,Rm8,Rm9,Rm10;
-                double n,Sf1, Sf2, Sf3, Sf4, Sf5, Sf6,Sf7,Sf8,Sf9,Sf10;
-                double So, dl2, dl3, dl4, dl5 , dl6,dl7,dl8,dl9,dl10;
-                double Qc1,Qc2,Qc3,Qc4,Qc5,Qc6,Qc7,Qc8,Qc9,Qc10;
-                double DeltaX2,DeltaX3,DeltaX4,DeltaX5,DeltaX6,DeltaX7,DeltaX8,DeltaX9,DeltaX10;
-                double X2,X3,X4,X5,X6,X7,X8,X9,X10;
+                double y1, y2;
+                double B, A1, A2;
+                double Qs, V1, V2, E1, E2;
+                double deltaE2 = 0;
+                double Rm1, Rm2;
+                double n,Sf1, Sf2;
+                double So;
+                double Qc1;
+                double DeltaX2, X2;
 
-
-                y1 = Double.parseDouble(txtKedalamanSaluran.getText().toString());
+               /* y1 = Double.parseDouble(txtKedalamanSaluran.getText().toString());
                 range = Double.parseDouble(txtRangeElevasi.getText().toString());
                 y2 = y1 - range;
                 B = Double.parseDouble(txtLebarSaluran.getText().toString());
@@ -207,32 +205,23 @@ public class Main3Activity extends AppCompatActivity {
                 V2 = Qs / A2;
                 E1= y1 +  (Math.pow(V1,2) / (2* g));
                 E2= y2 +  (Math.pow(V2,2) / (2* g));
-
                 Rm1 = A1 / (2 * y1  + B );
                 Rm2 = A2 / (2 * y2  + B );
                 n = Double.parseDouble(txtManning.getText().toString());
-
                 double R2per3_1 = Math.cbrt(Math.pow(Rm1,2));
                 double Sf1temp = (n * Qs) / (A1 * R2per3_1);
                 Sf1 = Math.pow(Sf1temp,2);
-
                 double R2per3_2 = Math.cbrt(Math.pow(Rm2,2));
                 double Sf2temp = (n * Qs) / (A2 * R2per3_2);
                 Sf2 = Math.pow(Sf2temp,2);
-
-
                 double rataSf2 = (Sf1 + Sf2) /2;
-                /*double rataSf3 = (Sf2 + Sf3) /2;*/
-
+                double rataSf3 = (Sf2 + Sf3) /2;
                 So = Double.parseDouble(txtKemiringan.getText().toString());
-
                 Qc1 = V1 * A1;
-
-
                 DeltaX2 = deltaE2 / (So - rataSf2);
+                X2 = DeltaX2;*/
 
-                X2 = DeltaX2;
-
+                Qc1 = 5.555555555555555555555555;
 
                 txtHasil.setText("B : "+ "null");
                 txtHasil2.setText("Qc : "+ Qc1);

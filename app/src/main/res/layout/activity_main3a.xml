@@ -81,12 +81,37 @@
                     tools:ignore="LabelFor" />
 
                 <TextView
+                    android:id="@+id/textView18p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="n (manning)"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txtManning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="lihat tabel"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <TextView
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="m" />
             </TableRow>
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
@@ -230,7 +255,7 @@
                     tools:ignore="LabelFor" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/textView2uu1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="m " />
@@ -256,6 +281,56 @@
 
                 <TextView
                     android:id="@+id/textView210"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m " />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="y1"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txty1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contoh: 1"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/textView2oq1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m " />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="range"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txtrange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contoh: 1"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+
+                <TextView
+                    android:id="@+id/textView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="m " />
