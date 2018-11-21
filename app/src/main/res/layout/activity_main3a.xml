@@ -17,9 +17,10 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="228dp"
-            android:layout_gravity="left"
-            app:srcCompat="@drawable/saluran_pentung" />
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/saluran_pentung"
+            tools:ignore="ContentDescription" />
 
        <!-- <HorizontalScrollView
             android:layout_width="match_parent"
@@ -49,13 +50,15 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="5dp"
                     android:text="hasil "
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,RtlSymmetry"
+                    android:paddingStart="5dp" />
 
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m3/s" />
+                    android:text="m3/s"
+                    tools:ignore="HardcodedText" />
             </TableRow>
 
 
@@ -104,13 +107,14 @@
                     android:layout_height="wrap_content"
                     android:hint="lihat tabel"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m" />
+                    android:text="m"
+                    tools:ignore="HardcodedText" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -130,13 +134,14 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 5"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
 
             <TableRow
@@ -156,13 +161,14 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 0.0015"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -181,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 0.05"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -200,13 +206,14 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView202"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
 
             <TableRow
@@ -226,13 +233,14 @@
                     android:layout_height="wrap_content"
                     android:hint="lihat tabel"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
 
             <TableRow
@@ -252,7 +260,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView2uu1"
@@ -277,13 +285,14 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 0.5"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView210"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -302,13 +311,14 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView2oq1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -327,13 +337,14 @@
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="LabelFor" />
+                    tools:ignore="HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="m " />
+                    android:text="m "
+                    tools:ignore="HardcodedText" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -350,7 +361,8 @@
                     android:id="@+id/textView2101"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="9.80665 m/s2" />
+                    android:text="9.80665 m/s2"
+                    tools:ignore="HardcodedText" />
             </TableRow>
         </TableLayout>
 
@@ -382,7 +394,7 @@
             android:layout_marginBottom="20dp"
             android:textColor="@android:color/black" />
 
-        <HorizontalScrollView
+        <!--<HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="40dp"
@@ -395,7 +407,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <!-- child views in here -->
+                &lt;!&ndash; child views in here &ndash;&gt;
 
                 <TableLayout
                     android:id="@+id/tablelayoutid"
@@ -520,7 +532,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Qc (m3/s)" />
+                            android:text="Qc (m3/s)"
+                            tools:ignore="HardcodedText" />
                     </TableRow>
 
                     <TableRow
@@ -572,7 +585,8 @@
                             android:gravity="center"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:text="-" />
+                            android:text="-"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/kR1"
@@ -599,7 +613,8 @@
                             android:gravity="center"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:text="-" />
+                            android:text="-"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/kdl1"
@@ -608,7 +623,8 @@
                             android:gravity="center"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:text="-" />
+                            android:text="-"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/txtDeltaX1"
@@ -617,7 +633,8 @@
                             android:gravity="center"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:text="-" />
+                            android:text="-"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/txtX1"
@@ -626,7 +643,8 @@
                             android:gravity="center"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:text="-" />
+                            android:text="-"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/Qc1"
@@ -635,7 +653,8 @@
                             android:gravity="center"
                             android:paddingLeft="15dp"
                             android:paddingRight="15dp"
-                            android:text="-" />
+                            android:text="-"
+                            tools:ignore="HardcodedText" />
                     </TableRow>
 
                     <TableRow
@@ -1680,6 +1699,6 @@
                 </TableLayout>
             </LinearLayout>
         </HorizontalScrollView>
-
+-->
     </LinearLayout>
 </ScrollView>

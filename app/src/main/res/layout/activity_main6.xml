@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     tools:context=".Main6Activity">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="212dp"
+        android:layout_width="180dp"
         android:layout_height="39dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -31,30 +39,31 @@
         android:text="Stasiun Hujan"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText,MissingConstraints"
         tools:layout_editor_absoluteY="16dp" />
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollView2"
         android:layout_width="356dp"
-        android:layout_height="372dp"
+        android:layout_height="300dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:orientation="vertical"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/spinner2">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TableRow
+                android:id="@+id/ra1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -62,13 +71,13 @@
                     android:id="@+id/textView35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stasiun Hujan (A1)"
+                    android:text="Stasiun Hujan (A1)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txta1"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -82,6 +91,7 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/rr1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -89,13 +99,13 @@
                     android:id="@+id/textView637"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Curah Hujan    (R1)"
+                    android:text="Curah Hujan    (R1)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr1"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -109,20 +119,22 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/ra2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView640"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stasiun Hujan (A2)"
+                    android:text="Stasiun Hujan (A2)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txta2"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -136,20 +148,22 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/rr2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView643"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Curah Hujan    (R2)"
+                    android:text="Curah Hujan    (R2)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr2"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -163,20 +177,22 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/ra3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView646"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stasiun Hujan (A3)"
+                    android:text="Stasiun Hujan (A3)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txta3"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -190,20 +206,22 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/rr3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView649"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Curah Hujan    (R3)"
+                    android:text="Curah Hujan    (R3)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr3"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -217,20 +235,22 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/ra4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView652"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stasiun Hujan (A4)"
+                    android:text="Stasiun Hujan (A4)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txta4"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -244,20 +264,22 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/rr4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView655"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Curah Hujan    (R4)"
+                    android:text="Curah Hujan    (R4)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr4"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
                     tools:ignore="HardcodedText,LabelFor" />
@@ -271,14 +293,16 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/ra5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Stasiun Hujan (A5)"
+                    android:text="Stasiun Hujan (A5)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -298,23 +322,25 @@
             </TableRow>
 
             <TableRow
+                android:id="@+id/rr5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Curah Hujan    (R5)"
+                    android:text="Curah Hujan    (R5)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr5"
-                    android:layout_width="180dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="HardcodedText,LabelFor" />
+                    tools:ignore="Autofill,HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -326,7 +352,7 @@
 
         </TableLayout>
 
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -354,7 +380,7 @@
 
         <TextView
             android:id="@+id/txthasil"
-            android:layout_width="144dp"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -398,3 +424,4 @@
         tools:ignore="HardcodedText" />
 
 </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -13,8 +13,7 @@ public class Main3Activity extends AppCompatActivity {
     TextView txtHasil, txtHasil2;
     EditText txtManning, txtKemiringan,txtLebarSaluran,txtKedalamanSaluran, txtRangeElevasi, txtkemiringantalud;
     Button btnHitung,btnNext;
-
-    EditText txtKedalamanSungai, txtso, txtKoefisienKecepatan, txtKedalamanSungaiHulu, txtTinggiJagaan, txth,txtm;
+    EditText txtKedalamanSungai, txtso, txtKoefisienKecepatan, txtKedalamanSungaiHulu, txtTinggiJagaan, txth,txtm,txtrange,txty1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +32,74 @@ public class Main3Activity extends AppCompatActivity {
         txtKedalamanSungaiHulu = findViewById(R.id.txtKedalamanSungaiHulu);
         txtTinggiJagaan = findViewById(R.id.txtTinggiJagaan);
         txth = findViewById(R.id.txth);
+        txtrange = findViewById(R.id.txtrange);
+        txty1 = findViewById(R.id.txty1);
         txtm = findViewById(R.id.txtm);
 
-        /*txtManning = findViewById(R.id.txtManning);
-        txtKemiringan = findViewById(R.id.txtKemiringan);
-        txtKedalamanSaluran = findViewById(R.id.txtKedalamanSaluran);
-        txtRangeElevasi = findViewById(R.id.txtRangeElevasi);
-        txtkemiringantalud = findViewById(R.id.txtkemiringantalud);
+        btnHitung = findViewById(R.id.btnHitung);
+        btnNext = findViewById(R.id.btnNext);
         txtHasil = findViewById(R.id.txtHasil);
         txtHasil2 = findViewById(R.id.txtHasil2);
-        btnHitung = findViewById(R.id.btnHitung);
-        btnNext = findViewById(R.id.btnNext);*/
 
-        //untuk tabel
+        btnHitung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double g = 9.80665;
+                double B, D, E1, E2, y2, V, A, Sf, R, P, DeltaX;
+                double d, n, brSaluran, so, alpha, y, s, h, range, y1, m, Qc1, debit;
+
+                d = Double.parseDouble(txtKedalamanSungai.getText().toString());
+                n = Double.parseDouble(txtManning.getText().toString());
+                brSaluran = Double.parseDouble(txtLebarSaluran.getText().toString());
+                so = Double.parseDouble(txtso.getText().toString());
+                alpha = Double.parseDouble(txtKoefisienKecepatan.getText().toString());
+                y = Double.parseDouble(txtKedalamanSungaiHulu.getText().toString());
+                s = Double.parseDouble(txtTinggiJagaan.getText().toString());
+                h = Double.parseDouble(txth.getText().toString());
+                range = Double.parseDouble(txtrange.getText().toString());
+                y1 = Double.parseDouble(txty1.getText().toString());
+                m = Double.parseDouble(txtm.getText().toString());
+                debit = Double.parseDouble( b.getString("Debitku"));
+
+                B = brSaluran + (2 * m * h) ;
+                D = d + s;
+                A = h * (brSaluran + (m*h));
+                V = debit / A ;
+                E1 = y1 + (alpha * ( Math.pow(V,2) / 29 ));
+                y2 = y1 - range;
+                E2 = y2 + (alpha * ( Math.pow(V,2) / 29 ));
+                Sf = alpha;
+                P = brSaluran + (2 * h * ( Math.sqrt(1 + Math.pow(m,2)) ) );
+                R = A / P;
+                DeltaX = (E2 - E1) / (so - Sf);
+
+                Qc1 = 5.555555555555555555555555;
+
+                txtHasil.setText("B : "+ "null");
+                txtHasil2.setText("Qc : "+ Qc1);
+                DecimalFormat precision = new DecimalFormat("#.#################################");
+                //untuk menyimpan data di activity (bundle)
+                final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
+                Bundle e = new Bundle();
+                //untuk menyimpan profil muka air
+                String hasil = new Double(Qc1).toString();
+                //String hasil2 = new Double(H).toString();
+                e.putString("ProfilMukaAir", hasil);
+                //e.putString("Haha", hasil2);
+                intent.putExtras(e);
+                //memulai Activity ketiga
+                btnNext.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
+    }
+}
+
+//untuk tabel
         /*final TextView ky1 = findViewById(R.id.ky1);
         final TextView kA1 = findViewById(R.id.kA1);
         final TextView kV1 = findViewById(R.id.kV1);
@@ -112,7 +166,7 @@ public class Main3Activity extends AppCompatActivity {
         final TextView kE7 = findViewById(R.id.kE7);
         final TextView kR7 = findViewById(R.id.kR7);
         final TextView kSf7 = findViewById(R.id.kSf7);
-        
+
 
         final TextView ky8 = findViewById(R.id.ky8);
         final TextView kA8 = findViewById(R.id.kA8);
@@ -178,21 +232,6 @@ public class Main3Activity extends AppCompatActivity {
         final TextView kX10 = findViewById(R.id.txtX10);*/
 
 
-
-        btnHitung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                double g = 9.80665, range;
-                double y1, y2;
-                double B, A1, A2;
-                double Qs, V1, V2, E1, E2;
-                double deltaE2 = 0;
-                double Rm1, Rm2;
-                double n,Sf1, Sf2;
-                double So;
-                double Qc1;
-                double DeltaX2, X2;
-
                /* y1 = Double.parseDouble(txtKedalamanSaluran.getText().toString());
                 range = Double.parseDouble(txtRangeElevasi.getText().toString());
                 y2 = y1 - range;
@@ -220,31 +259,3 @@ public class Main3Activity extends AppCompatActivity {
                 Qc1 = V1 * A1;
                 DeltaX2 = deltaE2 / (So - rataSf2);
                 X2 = DeltaX2;*/
-
-                Qc1 = 5.555555555555555555555555;
-
-                txtHasil.setText("B : "+ "null");
-                txtHasil2.setText("Qc : "+ Qc1);
-                DecimalFormat precision = new DecimalFormat("#.#################################");
-
-
-                //untuk menyimpan data di activity (bundle)
-                final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
-                Bundle e = new Bundle();
-                //untuk menyimpan profil muka air
-                String hasil = new Double(Qc1).toString();
-               // String hasil2 = new Double(H).toString();
-                e.putString("ProfilMukaAir", hasil);
-                //e.putString("Haha", hasil2);
-                intent.putExtras(e);
-                //memulai Activity ketiga
-                btnNext.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        startActivity(intent);
-                    }
-                });
-            }
-        });
-    }
-}
