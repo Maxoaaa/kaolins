@@ -31,9 +31,8 @@
             android:id="@+id/textView27"
             android:layout_width="387dp"
             android:layout_height="338dp"
-            android:gravity="center"
             android:text="@string/tentang_deskripsi"
-            android:textSize="24sp"
+            android:textSize="18sp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="180dp" />

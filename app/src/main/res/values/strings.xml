@@ -35,8 +35,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="judul"><![CDATA[ANALISIS VOLUME LONG STORAGE BADAN SUNGAI BERBASIS APLIKASI ANDROID]]></string>
-    <string name="tentang_deskripsi">Aplikasi ini dibuat oleh Kartika Sri Rahayu, mahasiswa program studi Teknik Sipil, Universitas Pembangungan Jaya.
-        \n\n
-    Aplikasi ini adalah aplikasi perhitungan untuk menentukan Volume Long Storage.
+    <string name="tentang_deskripsi">
+        <html><head /><body style="text-align:justify;"> Aplikasi ini dibuat oleh Kartika Sri Rahayu, mahasiswa program studi Teknik Sipil, Universitas Pembangungan Jaya.
+             \n\n
+                Aplikasi ini bernama VoLoS adalah aplikasi yang dapat digunakan untuk melakukan perhitungan <i>volume long storage</i> badan sungai. <i>Long Storage</i> adalah bangunan penahan air yang berfungsi menyimpan air di dalam sungai, kanal dan atau parit pada lahan yang relatif datar dengan cara menahan aliran untuk menaikkan permukaan air sehingga dapat mempermudah dan mempercepat perhitungan langkah - langkah untuk melakukan perhitungan tersedia di halaman "Bantuan"
+        </body>
+        </html>
     </string>
+    <string name="deskripsi_volume">Long storage adalah suatu bangunan yang dibangun untuk menanggulangi masalah banjir. dalam bahasa inggris long yang berarti panjang dan storage berarti penyimpanan, jadi long storage adalah penyimpanan panjang yang berfungsi untuk membuat resapan sehingga tidak menjadi beban aliran permukaan pada saat sungai meluap.</string>
+    <string name="debit_deskripsi">Metode rasional adalah jika curah hujan dengan intensitas I terjadi secara terus-menerus, maka laju limpasan langsung akan bertambah sampai mencapai waktu konsentrasi tc. Untuk pemilihan metode perhitungan hebit hujan memakai Metode Rasional</string>
+    <string name="intensitas_deskripsi">Intensitas hujan adalah tingginya atau pada kedalaman air hujan per satuan waktu. Sifat umum dari hujan adalah semakin singkat waktu hujan berlangsung intensitasnya cenderung makin tinggi dan makin besar periode ulangnya makin tinggi pula intensitasnya. Untuk pemilihan metode perhitungan intensitas hujan memakai Metode Mononobe.</string>
+    <string name="backWater_deskripsi">Secara umum metoda tahapan dinyatakan dengan membagi saluran menjadi bagian-bagian saluran yang pendek, lalu menghitung secara bertahap dari satu ujung ke ujung saluran lainnya.Perhitungan back water memilih metode dari direct step method</string>
+    <string name="rerata_deskripsi">Metode ini berdasarkan rata-rata timbangan (weighted average). Metode polygon thiessen ini memberi proporsi terhadap luasan daerah pengaruh stasiun hujan untuk mengakomodasi ketidaksamaan pada jarak. Metode ini didasarkan pada asumsi bahwa variasi hujan antara stasiun hujan yang satu dengan lainnya adalah linear dan stasiun hujannya dianggap dapat mewakili kawasan terdekat (Suripin, 2004).Untuk pemilihan metode perhitungan curah hujan rata-rata memakai Metode Polygon Thiessen</string>
 </resources>

@@ -19,22 +19,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Panjang Sungai "
-                android:textSize="18sp" />
+                android:text="Tinggi Mercu (D)"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
 
             <EditText
-                android:id="@+id/txtluasdas"
+                android:id="@+id/txtMercu"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:inputType="number|numberDecimal" />
+                android:inputType="number|numberDecimal"
+                tools:ignore="Autofill,LabelFor" />
 
             <TextView
-                android:id="@+id/textView23"
+                android:id="@+id/textView231"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km" />
+                android:text="km"
+                tools:ignore="HardcodedText" />
         </TableRow>
-
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -42,7 +44,57 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="QC "
+                android:text="Panjang Sungai (B)"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/txtPanjangSungai"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"
+                tools:ignore="Autofill,LabelFor" />
+
+            <TextView
+                android:id="@+id/textView232"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="km"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jarak Antara Kedua Tampang"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/txtjarakTampang"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"
+                tools:ignore="Autofill,LabelFor" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="km"
+                tools:ignore="HardcodedText" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volume Long Storage (VLs)"
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
@@ -52,43 +104,27 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:text="hasil "
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,RtlSymmetry"
+                android:paddingStart="5dp" />
 
             <TextView
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="m3/s" />
+                android:text="m3/s"
+                tools:ignore="HardcodedText" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </TableLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/btnHitung"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Hitung" />
+        android:text="Hitung"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/txtHasil"

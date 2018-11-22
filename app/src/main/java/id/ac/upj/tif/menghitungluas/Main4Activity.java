@@ -21,7 +21,7 @@ public class Main4Activity extends AppCompatActivity {
         kyuc.setText(b.getCharSequence("ProfilMukaAir"));
 
         txtHasil = findViewById(R.id.txtHasil);
-        txtLuas = findViewById(R.id.txtluasdas);
+        //txtLuas = findViewById(R.id.txtHasil);
         btnHitung = findViewById(R.id.btnHitung);
 
         btnHitung.setOnClickListener(new View.OnClickListener() {

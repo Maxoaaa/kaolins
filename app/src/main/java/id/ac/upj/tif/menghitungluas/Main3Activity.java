@@ -80,7 +80,7 @@ public class Main3Activity extends AppCompatActivity {
                 Qc1 = 5.555555555555555555555555;
 
                 txtHasil.setText("B : "+ debit);
-                txtHasil2.setText("Qc : "+ Qc1);
+                txtHasil2.setText("Sf : "+ Sf);
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)
                 final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);

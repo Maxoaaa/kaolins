@@ -40,7 +40,7 @@ public class Profil_muka_air extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //mengubah judul pada toolbar
-        getActivity().setTitle("Profil Muka Air");
+        getActivity().setTitle("Back Water");
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

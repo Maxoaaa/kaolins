@@ -20,6 +20,7 @@ import android.widget.Button;
 import id.ac.upj.tif.menghitungluas.penjelasan.Debit_banjir;
 import id.ac.upj.tif.menghitungluas.penjelasan.Intensitas_hujan;
 import id.ac.upj.tif.menghitungluas.penjelasan.Profil_muka_air;
+import id.ac.upj.tif.menghitungluas.penjelasan.Rerata_hujan;
 import id.ac.upj.tif.menghitungluas.penjelasan.Volume_tampung;
 import id.ac.upj.tif.menghitungluas.support.Tentang;
 
@@ -28,6 +29,7 @@ public class Main5Activity extends AppCompatActivity
         Penjelasan.OnFragmentInteractionListener,
         Tentang.OnFragmentInteractionListener,
         Intensitas_hujan.OnFragmentInteractionListener,
+        Rerata_hujan.OnFragmentInteractionListener,
         Debit_banjir.OnFragmentInteractionListener,
         Profil_muka_air.OnFragmentInteractionListener,
         Volume_tampung.OnFragmentInteractionListener{
@@ -102,6 +104,8 @@ public class Main5Activity extends AppCompatActivity
             Intent intent = new Intent(Main5Activity.this, MainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_intenhu) {
+            fragmentClass = Intensitas_hujan.class;
+        } else if (id == R.id.nav_rerata_hujan) {
             fragmentClass = Intensitas_hujan.class;
         } else if (id == R.id.nav_banjir) {
             fragmentClass = Debit_banjir.class;
