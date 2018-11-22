@@ -35,4 +35,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="judul"><![CDATA[ANALISIS VOLUME LONG STORAGE BADAN SUNGAI BERBASIS APLIKASI ANDROID]]></string>
+    <string name="tentang_deskripsi">Aplikasi ini dibuat oleh Kartika Sri Rahayu, mahasiswa program studi Teknik Sipil, Universitas Pembangungan Jaya.
+        \n\n
+    Aplikasi ini adalah aplikasi perhitungan untuk menentukan Volume Long Storage.
+    </string>
 </resources>

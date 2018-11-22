@@ -18,7 +18,7 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main3a);
 
         final Bundle b = getIntent().getExtras();
         TextView debit =  findViewById(R.id.namaValue);
@@ -46,7 +46,7 @@ public class Main3Activity extends AppCompatActivity {
             public void onClick(View view) {
                 double g = 9.80665;
                 double B, D, E1, E2, y2, V, A, Sf, R, P, DeltaX;
-                double d, n, brSaluran, so, alpha, y, s, h, range, y1, m, Qc1, debit;
+                double d, n, brSaluran, so, alpha, y, s, h, range, y1, m, Qc1, debit, S;
 
                 d = Double.parseDouble(txtKedalamanSungai.getText().toString());
                 n = Double.parseDouble(txtManning.getText().toString());
@@ -61,21 +61,25 @@ public class Main3Activity extends AppCompatActivity {
                 m = Double.parseDouble(txtm.getText().toString());
                 debit = Double.parseDouble( b.getString("Debitku"));
 
-                B = brSaluran + (2 * m * h) ;
-                D = d + s;
+
                 A = h * (brSaluran + (m*h));
                 V = debit / A ;
-                E1 = y1 + (alpha * ( Math.pow(V,2) / 29 ));
+                E1 = y1 + (alpha * ( Math.pow(V,2) / (2 * g) ));
                 y2 = y1 - range;
-                E2 = y2 + (alpha * ( Math.pow(V,2) / 29 ));
-                Sf = alpha;
-                P = brSaluran + (2 * h * ( Math.sqrt(1 + Math.pow(m,2)) ) );
+                E2 = y2 + (alpha * ( Math.pow(V,2) / 2 * g ));
+                P = brSaluran + ((2 * h) * ( Math.sqrt(1 + Math.pow(m,2)) ) );
                 R = A / P;
+                Sf = Math.pow( ( (n * debit) / ( A * Math.sqrt(Math.pow(R,2) )) ),2 );
+                B = brSaluran + (2 * m * h) ;
+                D = d + s;
                 DeltaX = (E2 - E1) / (so - Sf);
+                //S = V / 9;
+                S = Math.cbrt( V / ( (1/n) * Math.sqrt(Math.pow(R,2)) ) );
+
 
                 Qc1 = 5.555555555555555555555555;
 
-                txtHasil.setText("B : "+ "null");
+                txtHasil.setText("B : "+ debit);
                 txtHasil2.setText("Qc : "+ Qc1);
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)

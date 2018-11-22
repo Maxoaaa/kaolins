@@ -37,7 +37,7 @@ public class Main4Activity extends AppCompatActivity {
                 double S = H/(0.9 * L);
                 double Tc = 0.101947 * (Math.pow(L,0.77)/Math.pow(S,0.835) );
                 double Tp = 0.6 * Tc;
-
+                //voume Ls = D*B* deltaX
                 txtHasil.setText("Volume Tampung : " + Tp);
 
             }
