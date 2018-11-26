@@ -25,17 +25,13 @@ public class Splashscreen extends AppCompatActivity {
 
             @Override
             public void run() {
-                // TODO Auto-generated method stub
                 Intent i = new Intent(Splashscreen.this, Main5Activity.class);
                 startActivity(i); // menghubungkan activity splashscren ke main activity dengan intent
-
-
                 //jeda selesai Splashscreen
                 this.finish();
             }
 
             private void finish() {
-                // TODO Auto-generated method stub
 
             }
         }, splashInterval);

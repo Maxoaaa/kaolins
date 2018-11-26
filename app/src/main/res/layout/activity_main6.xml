@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="vertical"
-    tools:context=".Main6Activity">
+    tools:context=".Main6Activity"
+    tools:ignore="ScrollViewCount">
 
 <android.support.constraint.ConstraintLayout
     android:layout_height="wrap_content"
@@ -311,7 +312,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number|numberDecimal"
-                    tools:ignore="HardcodedText,LabelFor" />
+                    tools:ignore="Autofill,HardcodedText,LabelFor" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -423,5 +424,21 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="HardcodedText" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorAccent_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_info_black_24dp"
+        tools:ignore="MissingConstraints,VectorDrawableCompat"
+        android:focusable="true" />
+
 </android.support.constraint.ConstraintLayout>
+
 </ScrollView>

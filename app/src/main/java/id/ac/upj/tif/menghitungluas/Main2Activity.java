@@ -1,19 +1,29 @@
 package id.ac.upj.tif.menghitungluas;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import id.ac.upj.tif.menghitungluas.penjelasan.intensitasDialogFragment;
 
 
 public class Main2Activity extends AppCompatActivity {
     TextView txtHasil;
     EditText txtLuas,txtLs,txtLt;
     Button btnHitung;
+    FloatingActionButton btn_float;
     Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +40,7 @@ public class Main2Activity extends AppCompatActivity {
         //txtLs = findViewById(R.id.txtLs);
         //txtLt = findViewById(R.id.txtLt);
         btnHitung = findViewById(R.id.btnHitung);
+        btn_float = findViewById(R.id.btn_float);
 
         //String jalur = spinner.getSelectedItem().toString();
         btnHitung.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +81,35 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+/*        FragmentManager mFragmentManager = getSupportFragmentManager();
+        FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
 
+        HomeFragment mHomeFragment = new HomeFragment();
 
+        Fragment fragment = mFragmentManager.findFragmentByTag(HomeFragment.class.getSimpleName());
+
+        if (!(fragment instanceof HomeFragment)) {
+            mFragmentTransaction.add(R.id.frame_container, mHomeFragment, HomeFragment.class.getSimpleName());
+
+            Log.d("MyFlexibleFragment", "Fragment Name :" + HomeFragment.class.getSimpleName());
+
+            mFragmentTransaction.commit();
+        }*/
+        btn_float.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               final Dialog dialog = new Dialog(Main2Activity.this);
+               dialog.setContentView(R.layout.fragment_intensitas_hujan);
+               dialog.setTitle("Intensitas");
+             /*  Button tutup = dialog.findViewById(R.id.btn_close);
+               tutup.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View view) {
+                       dialog.dismiss();
+                   }
+               });*/
+               dialog.show();
+            }
+        });
     }
 }

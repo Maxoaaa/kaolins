@@ -394,6 +394,17 @@
             android:layout_marginBottom="20dp"
             android:textColor="@android:color/black" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            app:backgroundTint="@color/colorAccent_light"
+            app:srcCompat="@drawable/ic_info_black_24dp"
+            tools:ignore="RtlHardcoded,VectorDrawableCompat"
+            android:focusable="true" />
+
         <!--<HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

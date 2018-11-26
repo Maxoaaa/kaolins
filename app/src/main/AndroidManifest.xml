@@ -26,6 +26,7 @@
             android:name=".Main5Activity"
             android:label="VoLoS"
             android:theme="@style/AppTheme.NoActionBar">
+        <!--android:launchMode="singleTop"-->
 
             <!--
              <intent-filter>
