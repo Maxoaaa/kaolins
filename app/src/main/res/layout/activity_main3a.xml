@@ -38,7 +38,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="Qp (Debit Banjir Maks)  "
                     android:textSize="18sp"
@@ -46,12 +46,12 @@
 
                 <TextView
                     android:id="@+id/namaValue"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
                     android:paddingLeft="5dp"
                     android:text="hasil "
-                    tools:ignore="HardcodedText,RtlSymmetry"
-                    android:paddingStart="5dp" />
+                    tools:ignore="HardcodedText,RtlSymmetry" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -62,14 +62,13 @@
             </TableRow>
 
 
-
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="165dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:text="d (kedalaman Existing Sungai)"
                     android:textSize="16sp"
@@ -77,7 +76,7 @@
 
                 <EditText
                     android:id="@+id/txtKedalamanSungai"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="lihat tabel"
                     android:inputType="number|numberDecimal"
@@ -94,7 +93,7 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="n (manning)"
@@ -103,7 +102,7 @@
 
                 <EditText
                     android:id="@+id/txtManning"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="lihat tabel"
                     android:inputType="number|numberDecimal"
@@ -121,7 +120,7 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="b"
@@ -130,7 +129,7 @@
 
                 <EditText
                     android:id="@+id/txtLebarSaluran"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 5"
                     android:inputType="number|numberDecimal"
@@ -149,7 +148,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="So (Kemiringan Dasar) "
                     android:textSize="16sp"
@@ -157,7 +156,7 @@
 
                 <EditText
                     android:id="@+id/txtso"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 0.0015"
                     android:inputType="number|numberDecimal"
@@ -175,7 +174,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="α "
                     android:textSize="24sp"
@@ -183,7 +182,7 @@
 
                 <EditText
                     android:id="@+id/txtKoefisienKecepatan"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 0.05"
                     android:inputType="number|numberDecimal"
@@ -194,15 +193,15 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="165dp"
+                    android:layout_height="match_parent"
                     android:text="y (kedalaman sungai hulu) "
                     android:textSize="16sp"
                     tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtKedalamanSungaiHulu"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
@@ -221,7 +220,7 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="s (Tinggi Jagaan) "
                     android:textSize="18sp"
@@ -229,7 +228,7 @@
 
                 <EditText
                     android:id="@+id/txtTinggiJagaan"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="lihat tabel"
                     android:inputType="number|numberDecimal"
@@ -244,11 +243,11 @@
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_width="165dp"
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="h"
                     android:textSize="18sp"
@@ -256,7 +255,7 @@
 
                 <EditText
                     android:id="@+id/txth"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
@@ -273,7 +272,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="m"
                     android:textSize="18sp"
@@ -281,7 +280,7 @@
 
                 <EditText
                     android:id="@+id/txtm"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 0.5"
                     android:inputType="number|numberDecimal"
@@ -299,7 +298,7 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="y1"
                     android:textSize="18sp"
@@ -307,7 +306,7 @@
 
                 <EditText
                     android:id="@+id/txty1"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
@@ -325,7 +324,7 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="range"
                     android:textSize="18sp"
@@ -333,7 +332,7 @@
 
                 <EditText
                     android:id="@+id/txtrange"
-                    android:layout_width="match_parent"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:hint="Contoh: 1"
                     android:inputType="number|numberDecimal"
@@ -351,7 +350,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:text="gravitasi"
                     android:textSize="18sp"
@@ -359,7 +358,7 @@
 
                 <TextView
                     android:id="@+id/textView2101"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:text="9.80665 m/s2"
                     tools:ignore="HardcodedText" />

@@ -101,13 +101,14 @@ public class Main2Activity extends AppCompatActivity {
                final Dialog dialog = new Dialog(Main2Activity.this);
                dialog.setContentView(R.layout.fragment_intensitas_hujan);
                dialog.setTitle("Intensitas");
-             /*  Button tutup = dialog.findViewById(R.id.btn_close);
+               Button tutup = dialog.findViewById(R.id.btn_close);
+               tutup.setVisibility(View.VISIBLE);
                tutup.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View view) {
                        dialog.dismiss();
                    }
-               });*/
+               });
                dialog.show();
             }
         });

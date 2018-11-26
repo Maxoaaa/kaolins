@@ -101,12 +101,12 @@ public class Main5Activity extends AppCompatActivity
         Class fragmentClass = null;
         if (id == R.id.nav_hitung) {
             fragmentClass = Penjelasan.class;
-            Intent intent = new Intent(Main5Activity.this, MainActivity.class);
+            Intent intent = new Intent(Main5Activity.this, Main6Activity.class);
             startActivity(intent);
         } else if (id == R.id.nav_intenhu) {
             fragmentClass = Intensitas_hujan.class;
         } else if (id == R.id.nav_rerata_hujan) {
-            fragmentClass = Intensitas_hujan.class;
+            fragmentClass = Rerata_hujan.class;
         } else if (id == R.id.nav_banjir) {
             fragmentClass = Debit_banjir.class;
         } else if (id == R.id.nav_profil) {

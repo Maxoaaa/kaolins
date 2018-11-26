@@ -16,7 +16,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="C (koefisien)  "
                 android:textSize="18sp"
@@ -24,7 +24,7 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="match_parent"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#2ecc71"
                 android:entries="@array/android_dropdown_arrays"
@@ -37,7 +37,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="I (Intensitas Hujan)  "
                 android:textSize="18sp"
@@ -45,7 +45,7 @@
 
             <TextView
                 android:id="@+id/namaValue"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:text="hasil "
@@ -63,7 +63,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="A (Luas)  "
                 android:textSize="18sp"
@@ -71,7 +71,7 @@
 
             <EditText
                 android:id="@+id/txtLuas"
-                android:layout_width="150dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:hint="contoh: 0.4"
                 android:inputType="number|numberDecimal"

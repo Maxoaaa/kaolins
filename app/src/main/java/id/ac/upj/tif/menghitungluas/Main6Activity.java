@@ -124,7 +124,7 @@ public class Main6Activity extends AppCompatActivity {
                 }
 
                 if ((a1 != 0 && r1 != 0) && (a2 == 0 && r2 == 0) && (a3 == 0 && r3 == 0) && (a4 == 0 && r4 == 0) && (a5 == 0 && r5 == 0)){
-                    R = ((a1*r1)) / (a1+a2);
+                    R = ((a1*r1)) / (a1);
                 }
                 else if ((a1 != 0 && r1 != 0) && (a2 != 0 && r2 != 0) && (a3 == 0 && r3 == 0) && (a4 == 0 && r4 == 0) && (a5 == 0 && r5 == 0)){
                     R = ((a1*r1)+(a2*r2)) / (a1+a2);
@@ -142,11 +142,11 @@ public class Main6Activity extends AppCompatActivity {
 
                 txthasil.setText(Double.toString(R));
 
-                final Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+                final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 Bundle c = new Bundle();
                 //untuk menyimpan data debit
                 String hasil = Double.valueOf(R).toString();
-                c.putString("Intensitasku", hasil);
+                c.putString("Rerata_hujan", hasil);
                 intent.putExtras(c);
                 //memulai Activity kedua
                 //startActivity(intent);

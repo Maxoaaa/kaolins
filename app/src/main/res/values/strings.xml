@@ -47,4 +47,6 @@
     <string name="intensitas_deskripsi">Intensitas hujan adalah tingginya atau pada kedalaman air hujan per satuan waktu. Sifat umum dari hujan adalah semakin singkat waktu hujan berlangsung intensitasnya cenderung makin tinggi dan makin besar periode ulangnya makin tinggi pula intensitasnya. Untuk pemilihan metode perhitungan intensitas hujan memakai Metode Mononobe.</string>
     <string name="backWater_deskripsi">Secara umum metoda tahapan dinyatakan dengan membagi saluran menjadi bagian-bagian saluran yang pendek, lalu menghitung secara bertahap dari satu ujung ke ujung saluran lainnya.Perhitungan back water memilih metode dari direct step method</string>
     <string name="rerata_deskripsi">Metode ini berdasarkan rata-rata timbangan (weighted average). Metode polygon thiessen ini memberi proporsi terhadap luasan daerah pengaruh stasiun hujan untuk mengakomodasi ketidaksamaan pada jarak. Metode ini didasarkan pada asumsi bahwa variasi hujan antara stasiun hujan yang satu dengan lainnya adalah linear dan stasiun hujannya dianggap dapat mewakili kawasan terdekat (Suripin, 2004).Untuk pemilihan metode perhitungan curah hujan rata-rata memakai Metode Polygon Thiessen</string>
+    <string name="image_intensitas">image_intensitas</string>
+    <string name="close">close</string>
 </resources>

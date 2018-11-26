@@ -30,7 +30,7 @@
 
             <EditText
                 android:id="@+id/txtCurah"
-                android:layout_width="match_parent"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:hint="Contoh: 329.614"
                 android:inputType="number|numberDecimal"
@@ -58,7 +58,7 @@
 
             <EditText
                 android:id="@+id/txtWaktu"
-                android:layout_width="180dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:hint="Contoh: 5"
                 android:inputType="number|numberDecimal"

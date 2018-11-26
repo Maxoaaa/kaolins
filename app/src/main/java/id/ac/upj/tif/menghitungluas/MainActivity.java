@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Bundle b = getIntent().getExtras();
+        //TextView intensitas =  findViewById(R.id.namaValue);
+        //intensitas.setText(b.getCharSequence("Rerata_hujan"));
+
         txtHasil = findViewById(R.id.txtHasil);
         txtCurah = findViewById(R.id.txtCurah);
         txtWaktu = findViewById(R.id.txtWaktu);
@@ -74,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                double a,b,h,R,tc;
 
-               R = Double.parseDouble(txtCurah.getText().toString());
+                R = Double.parseDouble(txtCurah.getText().toString());
                 tc = Double.parseDouble(txtWaktu.getText().toString());
                 a = (R/24);
                 b = (24/(tc/60));
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 txtHasil.setText("Intensitas Hujan : " + x);
 
-                tc1.setText(Integer.toString(5));
+                    tc1.setText(Integer.toString(5));
                     tc2.setText(Integer.toString(10));
                     tc3.setText(Integer.toString(15));
                     tc4.setText(Integer.toString(20));
