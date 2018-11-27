@@ -90,19 +90,7 @@
             android:layout_height="match_parent" />
     </TableLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
-
-   <!-- <TextView
+    <!-- <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lt (Panjang Aliran Terjauh) : "
@@ -130,11 +118,6 @@
         android:layout_height="wrap_content"
         android:inputType="number|numberDecimal"
         tools:ignore="LabelFor" />-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
 
     <Button
         android:id="@+id/btnHitung"
@@ -148,6 +131,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="note :" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C(Koefisien) silakan lihat tabel" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btn_float"

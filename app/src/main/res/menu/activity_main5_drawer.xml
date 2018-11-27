@@ -16,7 +16,7 @@
             tools:ignore="HardcodedText" />
         <item
             android:id="@+id/nav_rerata_hujan"
-            android:icon="@drawable/ic_assignment_black_24dp"
+            android:icon="@drawable/ic_assessment_black_24dp"
             android:title="Rata-Rata Curah Hujan"
             tools:ignore="HardcodedText" />
         <item

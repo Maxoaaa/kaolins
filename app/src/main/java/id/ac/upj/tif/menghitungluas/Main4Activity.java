@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Main4Activity extends AppCompatActivity {
-    TextView txtHasil;
+    TextView txtHasil,namaValue;
     EditText txtLuas;
     Button btnHitung;
     FloatingActionButton btn_float;
@@ -20,11 +20,17 @@ public class Main4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
 
         final Bundle b = getIntent().getExtras();
-        TextView kyuc =  findViewById(R.id.namaValue);
-        kyuc.setText(b.getCharSequence("ProfilMukaAir"));
+        //TextView kyuc =  findViewById(R.id.namaValue);
+        EditText Mercu =  findViewById(R.id.txtMercu);
+        EditText PanjangSungai =  findViewById(R.id.txtPanjangSungai);
+        EditText jarakTampang =  findViewById(R.id.txtjarakTampang);
+        //kyuc.setText(b.getCharSequence("ProfilMukaAirD"));
+        Mercu.setText(b.getCharSequence("ProfilMukaAirD"));
+        jarakTampang.setText(b.getCharSequence("ProfilMukaAirDX"));
+        PanjangSungai.setText(b.getCharSequence("ProfilMukaAirB"));
 
         txtHasil = findViewById(R.id.txtHasil);
-        //txtLuas = findViewById(R.id.txtHasil);
+        namaValue = findViewById(R.id.namaValue);
         btnHitung = findViewById(R.id.btnHitung);
         btn_float = findViewById(R.id.btn_float);
 
@@ -33,16 +39,21 @@ public class Main4Activity extends AppCompatActivity {
             public void onClick(View view) {
                 double L;
                 double Q,H;
+                double volume, D, B, DX;
 
-                L = Double.parseDouble(txtLuas.getText().toString());
+                /*L = Double.parseDouble(txtLuas.getText().toString());
                 Q = Double.parseDouble( b.getString("ProfilMukaAir"));
-                H = Double.parseDouble( b.getString("Haha"));
+                H = Double.parseDouble( b.getString("Haha"));*/
+                D = Double.parseDouble( b.getString("ProfilMukaAirD"));
+                B = Double.parseDouble( b.getString("ProfilMukaAirB"));
+                DX = Double.parseDouble( b.getString("ProfilMukaAirDX"));
 
-                double S = H/(0.9 * L);
-                double Tc = 0.101947 * (Math.pow(L,0.77)/Math.pow(S,0.835) );
-                double Tp = 0.6 * Tc;
-                //voume Ls = D*B* deltaX
-                txtHasil.setText("Volume Tampung : " + Tp);
+                //double S = H/(0.9 * L);
+                //double Tc = 0.101947 * (Math.pow(L,0.77)/Math.pow(S,0.835) );
+                //double Tp = 0.6 * Tc;
+                volume = D*B* DX;
+                //txtHasil.setText("Volume Tampung : " + volume);
+                namaValue.setText(""+volume);
 
             }
         });

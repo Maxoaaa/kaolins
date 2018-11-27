@@ -15,7 +15,7 @@ public class Main3Activity extends AppCompatActivity {
     TextView txtHasil, txtHasil2;
     EditText txtManning, txtKemiringan,txtLebarSaluran,txtKedalamanSaluran, txtRangeElevasi, txtkemiringantalud;
     Button btnHitung,btnNext;
-    FloatingActionButton btn_float;
+    FloatingActionButton btn_float,btn_float1,btn_float2,btn_float3;
     EditText txtKedalamanSungai, txtso, txtKoefisienKecepatan, txtKedalamanSungaiHulu, txtTinggiJagaan, txth,txtm,txtrange,txty1;
 
     @Override
@@ -42,6 +42,9 @@ public class Main3Activity extends AppCompatActivity {
         btnHitung = findViewById(R.id.btnHitung);
         btnNext = findViewById(R.id.btnNext);
         btn_float = findViewById(R.id.btn_float);
+        btn_float1 = findViewById(R.id.btn_float1);
+        btn_float2 = findViewById(R.id.btn_float2);
+        btn_float3 = findViewById(R.id.btn_float3);
         txtHasil = findViewById(R.id.txtHasil);
         txtHasil2 = findViewById(R.id.txtHasil2);
 
@@ -81,18 +84,22 @@ public class Main3Activity extends AppCompatActivity {
                 S = Math.cbrt( V / ( (1/n) * Math.sqrt(Math.pow(R,2)) ) );
 
 
-                Qc1 = 5.555555555555555555555555;
+                //Qc1 = 5.555555555555555555555555;
 
-                txtHasil.setText("B : "+ debit);
+                txtHasil.setText("S : "+ S);
                 txtHasil2.setText("Sf : "+ Sf);
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)
                 final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
                 Bundle e = new Bundle();
                 //untuk menyimpan profil muka air
-                String hasil = new Double(Qc1).toString();
+                String hasil1 = new Double(D).toString();
+                String hasil2 = new Double(DeltaX).toString();
+                String hasil3 = new Double(B).toString();
                 //String hasil2 = new Double(H).toString();
-                e.putString("ProfilMukaAir", hasil);
+                e.putString("ProfilMukaAirD", hasil1);
+                e.putString("ProfilMukaAirDX", hasil2);
+                e.putString("ProfilMukaAirB", hasil3);
                 //e.putString("Haha", hasil2);
                 intent.putExtras(e);
                 //memulai Activity ketiga
@@ -110,6 +117,57 @@ public class Main3Activity extends AppCompatActivity {
                 final Dialog dialog = new Dialog(Main3Activity.this);
                 dialog.setContentView(R.layout.fragment_profil_muka_air);
                 dialog.setTitle("Back Water");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
+        btn_float1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main3Activity.this);
+                dialog.setContentView(R.layout.fragment_tabel_profil1);
+                dialog.setTitle("Tabel 1");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
+        btn_float2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main3Activity.this);
+                dialog.setContentView(R.layout.fragment_tabel_profil2);
+                dialog.setTitle("Tabel 2");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
+        btn_float3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main3Activity.this);
+                dialog.setContentView(R.layout.fragment_tabel_profil3);
+                dialog.setTitle("Tabel 3");
                 Button tutup = dialog.findViewById(R.id.btn_close);
                 tutup.setVisibility(View.VISIBLE);
                 tutup.setOnClickListener(new View.OnClickListener() {

@@ -33,7 +33,6 @@
         android:layout_width="130dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_vertical"
@@ -254,11 +253,10 @@
                     android:id="@+id/textView652"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Stasiun Hujan (A4)  :"
                     android:textSize="18sp"
-                    tools:ignore="HardcodedText"
-                    android:layout_marginStart="15dp" />
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txta4"
@@ -285,11 +283,10 @@
                     android:id="@+id/textView655"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Curah Hujan    (R4)  :"
                     android:textSize="18sp"
-                    tools:ignore="HardcodedText"
-                    android:layout_marginStart="15dp" />
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr4"
@@ -316,11 +313,10 @@
                     android:id="@+id/textView5"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Stasiun Hujan (A5)  :"
                     android:textSize="18sp"
-                    tools:ignore="HardcodedText"
-                    android:layout_marginStart="15dp" />
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txta5"
@@ -347,11 +343,10 @@
                     android:id="@+id/textView6"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Curah Hujan    (R5)  :"
                     android:textSize="18sp"
-                    tools:ignore="HardcodedText"
-                    android:layout_marginStart="15dp" />
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:id="@+id/txtr5"
