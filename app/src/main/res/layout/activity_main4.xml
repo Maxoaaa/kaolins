@@ -154,12 +154,12 @@
             tools:ignore="HardcodedText" />
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton4"
+            android:id="@+id/btn_float"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
             android:clickable="true"
             android:focusable="true"
             app:backgroundTint="@color/colorAccent_light"

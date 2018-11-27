@@ -1,6 +1,8 @@
 package id.ac.upj.tif.menghitungluas;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,7 @@ public class Main3Activity extends AppCompatActivity {
     TextView txtHasil, txtHasil2;
     EditText txtManning, txtKemiringan,txtLebarSaluran,txtKedalamanSaluran, txtRangeElevasi, txtkemiringantalud;
     Button btnHitung,btnNext;
+    FloatingActionButton btn_float;
     EditText txtKedalamanSungai, txtso, txtKoefisienKecepatan, txtKedalamanSungaiHulu, txtTinggiJagaan, txth,txtm,txtrange,txty1;
 
     @Override
@@ -38,6 +41,7 @@ public class Main3Activity extends AppCompatActivity {
 
         btnHitung = findViewById(R.id.btnHitung);
         btnNext = findViewById(R.id.btnNext);
+        btn_float = findViewById(R.id.btn_float);
         txtHasil = findViewById(R.id.txtHasil);
         txtHasil2 = findViewById(R.id.txtHasil2);
 
@@ -98,6 +102,23 @@ public class Main3Activity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+            }
+        });
+        btn_float.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main3Activity.this);
+                dialog.setContentView(R.layout.fragment_profil_muka_air);
+                dialog.setTitle("Back Water");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
             }
         });
     }

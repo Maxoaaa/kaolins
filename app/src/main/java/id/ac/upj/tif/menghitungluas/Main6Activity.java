@@ -1,7 +1,9 @@
 package id.ac.upj.tif.menghitungluas;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,6 +18,7 @@ public class Main6Activity extends AppCompatActivity {
     TextView txtHasil , tc7, ih7;
     EditText txtCurah, txtWaktu;
     Button btnHitung, btnNext;
+    FloatingActionButton btn_float;
     Spinner mspinner;
 
     private TableRow ra1, rr1, ra2,rr2, ra3,rr3, ra4,rr4, ra5,rr5;
@@ -33,6 +36,7 @@ public class Main6Activity extends AppCompatActivity {
         btnHitung = findViewById(R.id.btnHitung2);
         btnNext = findViewById(R.id.btnNext2);
         mspinner = findViewById(R.id.spinner2);
+        btn_float = findViewById(R.id.btn_float);
         final TextView txthasil = findViewById(R.id.txthasil);
 
         final TextView txta1 = findViewById(R.id.txta1);
@@ -235,33 +239,22 @@ public class Main6Activity extends AppCompatActivity {
                 // Do nothing
             }
         });
-/*        String[] plants = new String[]{
-                "1",
-                "2",
-                "3",
-                "4",
-                "5"
-        };
-
-        final List<String> plantsList = new ArrayList<>(Arrays.asList(plants));
-
-        final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
-                this,R.layout.activity_main6,R.array.dropdown_stasiun_hujan){
+        btn_float.setOnClickListener(new View.OnClickListener() {
             @Override
-            public View getDropDownView(int position, View convertView,
-                                        ViewGroup parent) {
-                View view = super.getDropDownView(position, convertView, parent);
-                if(position == 1){
-                    // Hide the second item from Spinner
-                    //ra2.setVisibility(View.GONE);
-                }
-                else {
-                    //rr2.setVisibility(View.VISIBLE);
-                }
-                return view;
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main6Activity.this);
+                dialog.setContentView(R.layout.fragment_rerata_hujan);
+                dialog.setTitle("Rata-rata Curah Hujan");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
             }
-        };
-        spinnerArrayAdapter.setDropDownViewResource(R.layout.activity_main6);
-        mspinner.setAdapter(spinnerArrayAdapter);*/
+        });
     }
 }

@@ -1,7 +1,9 @@
 package id.ac.upj.tif.menghitungluas;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txtHasil , tc7, ih7;
     EditText txtCurah, txtWaktu;
     Button btnHitung, btnNext;
-
+    FloatingActionButton btn_float;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         final Bundle b = getIntent().getExtras();
         //TextView intensitas =  findViewById(R.id.namaValue);
         //intensitas.setText(b.getCharSequence("Rerata_hujan"));
-
+        btn_float = findViewById(R.id.btn_float);
         txtHasil = findViewById(R.id.txtHasil);
         txtCurah = findViewById(R.id.txtCurah);
         txtWaktu = findViewById(R.id.txtWaktu);
@@ -154,7 +156,23 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-
+        btn_float.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setContentView(R.layout.fragment_intensitas_hujan);
+                dialog.setTitle("Intensitas Hujan");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
 
     }
 

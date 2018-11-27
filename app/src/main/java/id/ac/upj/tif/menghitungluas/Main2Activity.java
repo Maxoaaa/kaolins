@@ -81,26 +81,13 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*        FragmentManager mFragmentManager = getSupportFragmentManager();
-        FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
 
-        HomeFragment mHomeFragment = new HomeFragment();
-
-        Fragment fragment = mFragmentManager.findFragmentByTag(HomeFragment.class.getSimpleName());
-
-        if (!(fragment instanceof HomeFragment)) {
-            mFragmentTransaction.add(R.id.frame_container, mHomeFragment, HomeFragment.class.getSimpleName());
-
-            Log.d("MyFlexibleFragment", "Fragment Name :" + HomeFragment.class.getSimpleName());
-
-            mFragmentTransaction.commit();
-        }*/
         btn_float.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                final Dialog dialog = new Dialog(Main2Activity.this);
-               dialog.setContentView(R.layout.fragment_intensitas_hujan);
-               dialog.setTitle("Intensitas");
+               dialog.setContentView(R.layout.fragment_debit_banjir);
+               dialog.setTitle("Debit Banjir Maksimum");
                Button tutup = dialog.findViewById(R.id.btn_close);
                tutup.setVisibility(View.VISIBLE);
                tutup.setOnClickListener(new View.OnClickListener() {
