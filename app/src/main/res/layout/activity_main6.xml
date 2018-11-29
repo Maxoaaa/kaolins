@@ -46,13 +46,14 @@
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="356dp"
+        android:layout_width="0dp"
         android:layout_height="300dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="18dp"
         android:layout_marginRight="18dp"
+        android:background="@drawable/border"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,9 +62,9 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginStart="10dp">
+            android:layout_marginBottom="15dp">
 
             <TableRow
                 android:id="@+id/ra1"
@@ -90,7 +91,7 @@
                     android:id="@+id/textView36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="㎡"
+                    android:text="m²"
                     tools:ignore="HardcodedText" />
             </TableRow>
 
@@ -149,7 +150,7 @@
                     android:id="@+id/textView842"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="㎡"
+                    android:text="m²"
                     tools:ignore="HardcodedText" />
             </TableRow>
 
@@ -209,7 +210,7 @@
                     android:id="@+id/textView848"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="㎡"
+                    android:text="m²"
                     tools:ignore="HardcodedText" />
             </TableRow>
 
@@ -269,7 +270,7 @@
                     android:id="@+id/textView854"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="㎡"
+                    android:text="m²"
                     tools:ignore="HardcodedText" />
             </TableRow>
 
@@ -329,7 +330,7 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="㎡"
+                    android:text="m²"
                     tools:ignore="HardcodedText" />
             </TableRow>
 

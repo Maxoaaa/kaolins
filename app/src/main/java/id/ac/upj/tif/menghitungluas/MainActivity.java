@@ -80,8 +80,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                double a,b,h,R,tc;
 
-                R = Double.parseDouble(txtCurah.getText().toString());
-                tc = Double.parseDouble(txtWaktu.getText().toString());
+                if (txtCurah.getText().toString().isEmpty()){
+                    R = 0 ;
+                }else {
+                    R = Double.parseDouble(txtCurah.getText().toString());
+                }
+                if (txtWaktu.getText().toString().isEmpty()){
+                    tc = 0 ;
+                }else {
+                    tc = Double.parseDouble(txtWaktu.getText().toString());
+                }
+
                 a = (R/24);
                 b = (24/(tc/60));
                 h = Math.pow(b,2);

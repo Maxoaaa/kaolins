@@ -127,6 +127,43 @@ public class Main6Activity extends AppCompatActivity {
                     r5 = Double.parseDouble(txtr5.getText().toString());
                 }
 
+                //ketika memilih ulang stasiun maka akan manjadi 0
+                if (ra5.getVisibility() == View.GONE && rr5.getVisibility() == View.GONE ){
+                    a5 = 0;
+                    r5 = 0;
+                }
+                if ((ra5.getVisibility() == View.GONE && rr5.getVisibility() == View.GONE )
+                        && (ra4.getVisibility() == View.GONE && rr4.getVisibility() == View.GONE )){
+                    a5 = 0;
+                    r5 = 0;
+                    a4 = 0;
+                    r4 = 0;
+                }
+                if ((ra5.getVisibility() == View.GONE && rr5.getVisibility() == View.GONE )
+                        && (ra4.getVisibility() == View.GONE && rr4.getVisibility() == View.GONE )
+                        && (ra3.getVisibility() == View.GONE && rr3.getVisibility() == View.GONE )){
+                    a5 = 0;
+                    r5 = 0;
+                    a4 = 0;
+                    r4 = 0;
+                    a3 = 0;
+                    r3 = 0;
+                }
+                if ((ra5.getVisibility() == View.GONE && rr5.getVisibility() == View.GONE )
+                        && (ra4.getVisibility() == View.GONE && rr4.getVisibility() == View.GONE )
+                        && (ra3.getVisibility() == View.GONE && rr3.getVisibility() == View.GONE )
+                        && (ra2.getVisibility() == View.GONE && rr2.getVisibility() == View.GONE )){
+                    a5 = 0;
+                    r5 = 0;
+                    a4 = 0;
+                    r4 = 0;
+                    a3 = 0;
+                    r3 = 0;
+                    a2 = 0;
+                    r2 = 0;
+                }
+
+
                 if ((a1 != 0 && r1 != 0) && (a2 == 0 && r2 == 0) && (a3 == 0 && r3 == 0) && (a4 == 0 && r4 == 0) && (a5 == 0 && r5 == 0)){
                     R = ((a1*r1)) / (a1);
                 }

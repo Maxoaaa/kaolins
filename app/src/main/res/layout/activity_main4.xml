@@ -35,7 +35,7 @@
                 android:id="@+id/textView231"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km"
+                android:text="m"
                 tools:ignore="HardcodedText" />
         </TableRow>
         <TableRow
@@ -45,7 +45,7 @@
             <TextView
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:text="Panjang Sungai (B)"
+                android:text="Lebar Sungai (B)"
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
@@ -60,7 +60,7 @@
                 android:id="@+id/textView232"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km"
+                android:text="m"
                 tools:ignore="HardcodedText" />
         </TableRow>
         <TableRow
@@ -70,7 +70,7 @@
             <TextView
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="Jarak Antara Kedua Tampang"
+                android:text="Jarak Antara Kedua Tampang (∆X)"
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
@@ -85,7 +85,7 @@
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="km"
+                android:text="m"
                 tools:ignore="HardcodedText" />
         </TableRow>
         <TableRow
@@ -112,7 +112,7 @@
                 android:id="@+id/textView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="m3/s"
+                android:text="m³"
                 tools:ignore="HardcodedText" />
         </TableRow>
 

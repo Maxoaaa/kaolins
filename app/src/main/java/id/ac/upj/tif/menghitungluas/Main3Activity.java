@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 
 public class Main3Activity extends AppCompatActivity {
-    TextView txtHasil, txtHasil2;
+    TextView txtHasil, txtHasil2, txtHasil3;
     EditText txtManning, txtKemiringan,txtLebarSaluran,txtKedalamanSaluran, txtRangeElevasi, txtkemiringantalud;
     Button btnHitung,btnNext;
     FloatingActionButton btn_float,btn_float1,btn_float2,btn_float3;
@@ -21,18 +21,18 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3a);
+        setContentView(R.layout.activity_main3b);
 
         final Bundle b = getIntent().getExtras();
         TextView debit =  findViewById(R.id.namaValue);
-        debit.setText(b.getCharSequence("Debitku"));
+        debit.setText(b.getCharSequence("Debitku")+" m3/s");
 
         txtKedalamanSungai = findViewById(R.id.txtKedalamanSungai);
         txtManning = findViewById(R.id.txtManning);
         txtLebarSaluran = findViewById(R.id.txtLebarSaluran);
         txtso = findViewById(R.id.txtso);
         txtKoefisienKecepatan = findViewById(R.id.txtKoefisienKecepatan);
-        txtKedalamanSungaiHulu = findViewById(R.id.txtKedalamanSungaiHulu);
+        //txtKedalamanSungaiHulu = findViewById(R.id.txtKedalamanSungaiHulu);
         txtTinggiJagaan = findViewById(R.id.txtTinggiJagaan);
         txth = findViewById(R.id.txth);
         txtrange = findViewById(R.id.txtrange);
@@ -47,6 +47,7 @@ public class Main3Activity extends AppCompatActivity {
         btn_float3 = findViewById(R.id.btn_float3);
         txtHasil = findViewById(R.id.txtHasil);
         txtHasil2 = findViewById(R.id.txtHasil2);
+        txtHasil3 = findViewById(R.id.txtHasil3);
 
         btnHitung.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +61,7 @@ public class Main3Activity extends AppCompatActivity {
                 brSaluran = Double.parseDouble(txtLebarSaluran.getText().toString());
                 so = Double.parseDouble(txtso.getText().toString());
                 alpha = Double.parseDouble(txtKoefisienKecepatan.getText().toString());
-                y = Double.parseDouble(txtKedalamanSungaiHulu.getText().toString());
+                //y = Double.parseDouble(txtKedalamanSungaiHulu.getText().toString());
                 s = Double.parseDouble(txtTinggiJagaan.getText().toString());
                 h = Double.parseDouble(txth.getText().toString());
                 range = Double.parseDouble(txtrange.getText().toString());
@@ -86,8 +87,9 @@ public class Main3Activity extends AppCompatActivity {
 
                 //Qc1 = 5.555555555555555555555555;
 
-                txtHasil.setText("S : "+ S);
-                txtHasil2.setText("Sf : "+ Sf);
+                txtHasil.setText("D : "+ D+ " m");
+                txtHasil2.setText("B : "+ B+ " m");
+                txtHasil3.setText("Delta X : "+ DeltaX + " m");
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)
                 final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);

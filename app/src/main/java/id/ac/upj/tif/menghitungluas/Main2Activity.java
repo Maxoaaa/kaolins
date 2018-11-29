@@ -49,7 +49,12 @@ public class Main2Activity extends AppCompatActivity {
                 double A, Qs, C, Cs, tc, to, td, Lt, Ls, Vs, St;
                 double intensitas;
 
-                A = Double.parseDouble(txtLuas.getText().toString());
+                if (txtLuas.getText().toString().isEmpty()){
+                    A = 0 ;
+                }else {
+                    A = Double.parseDouble(txtLuas.getText().toString());
+                }
+
                 intensitas = Double.parseDouble( b.getString("Intensitasku"));
                 C = Double.parseDouble(spinner.getSelectedItem().toString());
                 //Ls = Double.parseDouble(txtLs.getText().toString());
