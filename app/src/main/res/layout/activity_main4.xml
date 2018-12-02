@@ -28,6 +28,7 @@
                 android:id="@+id/txtMercu"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:inputType="number|numberDecimal"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -53,6 +54,7 @@
                 android:id="@+id/txtPanjangSungai"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:inputType="number|numberDecimal"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -78,6 +80,7 @@
                 android:id="@+id/txtjarakTampang"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:enabled="false"
                 android:inputType="number|numberDecimal"
                 tools:ignore="Autofill,LabelFor" />
 
@@ -94,26 +97,45 @@
 
             <TextView
                 android:layout_width="165dp"
-                android:layout_height="77dp"
+                android:layout_height="wrap_content"
                 android:text="Volume Long Storage (VLs)"
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/namaValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:paddingLeft="5dp"
-                android:text="hasil "
-                tools:ignore="HardcodedText,RtlSymmetry" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
 
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="m³"
-                tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/namaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="hasil "
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m³"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
         </TableRow>
 
     </TableLayout>

@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
-    TextView txtHasil , tc7, ih7;
+    TextView txtHasil;
     EditText txtCurah, txtWaktu;
     Button btnHitung, btnNext;
     FloatingActionButton btn_float;
@@ -23,11 +23,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Bundle b = getIntent().getExtras();
-        //TextView intensitas =  findViewById(R.id.namaValue);
-        //intensitas.setText(b.getCharSequence("Rerata_hujan"));
+        txtCurah =  findViewById(R.id.txtCurah);
+        txtCurah.setText(b.getCharSequence("Rerata_hujan"));
+
         btn_float = findViewById(R.id.btn_float);
         txtHasil = findViewById(R.id.txtHasil);
-        txtCurah = findViewById(R.id.txtCurah);
+        //txtCurah = findViewById(R.id.txtCurah);
         txtWaktu = findViewById(R.id.txtWaktu);
         btnHitung = findViewById(R.id.btnHitung);
         btnNext = findViewById(R.id.btnNext);
@@ -53,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         final TextView tc18 = findViewById(R.id.tc18);
         final TextView tc19 = findViewById(R.id.tc19);
         final TextView tc20 = findViewById(R.id.tc20);
+        final TextView tc21 = findViewById(R.id.tc21);
+        final TextView tc22 = findViewById(R.id.tc22);
+        final TextView tc23 = findViewById(R.id.tc23);
+        final TextView tc24 = findViewById(R.id.tc24);
 
         final TextView ih1 = findViewById(R.id.ih1);
         final TextView ih2 = findViewById(R.id.ih2);
@@ -74,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
         final TextView ih18 = findViewById(R.id.ih18);
         final TextView ih19 = findViewById(R.id.ih19);
         final TextView ih20 = findViewById(R.id.ih20);
+        final TextView ih21 = findViewById(R.id.ih21);
+        final TextView ih22 = findViewById(R.id.ih22);
+        final TextView ih23 = findViewById(R.id.ih23);
+        final TextView ih24 = findViewById(R.id.ih24);
 
         btnHitung.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,40 +101,44 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 a = (R/24);
-                b = (24/(tc/60));
+                b = (24/(tc));
                 h = Math.pow(b,2);
                 double y = Math.cbrt(h);
                 double x = a*y;
 
-                txtHasil.setText("Intensitas Hujan : " + x);
+                txtHasil.setText("Intensitas Hujan : " + x+" mm/jam");
 
-                    tc1.setText(Integer.toString(5));
-                    tc2.setText(Integer.toString(10));
-                    tc3.setText(Integer.toString(15));
-                    tc4.setText(Integer.toString(20));
-                    tc5.setText(Integer.toString(25));
-                    tc6.setText(Integer.toString(30));
-                    tc7.setText(Integer.toString(35));
-                    tc8.setText(Integer.toString(40));
-                    tc9.setText(Integer.toString(45));
-                    tc10.setText(Integer.toString(50));
-                    tc11.setText(Integer.toString(55));
-                    tc12.setText(Integer.toString(60));
-                    tc13.setText(Integer.toString(65));
-                    tc14.setText(Integer.toString(70));
-                    tc15.setText(Integer.toString(75));
-                    tc16.setText(Integer.toString(80));
-                    tc17.setText(Integer.toString(85));
-                    tc18.setText(Integer.toString(90));
-                    tc19.setText(Integer.toString(95));
-                    tc20.setText(Integer.toString(100));
-                Double[] hhh = new Double[21];
-                Double[] xax = new Double[21];
+                    tc1.setText(Integer.toString(1));
+                    tc2.setText(Integer.toString(2));
+                    tc3.setText(Integer.toString(3));
+                    tc4.setText(Integer.toString(4));
+                    tc5.setText(Integer.toString(5));
+                    tc6.setText(Integer.toString(6));
+                    tc7.setText(Integer.toString(7));
+                    tc8.setText(Integer.toString(8));
+                    tc9.setText(Integer.toString(9));
+                    tc10.setText(Integer.toString(10));
+                    tc11.setText(Integer.toString(11));
+                    tc12.setText(Integer.toString(12));
+                    tc13.setText(Integer.toString(13));
+                    tc14.setText(Integer.toString(14));
+                    tc15.setText(Integer.toString(15));
+                    tc16.setText(Integer.toString(16));
+                    tc17.setText(Integer.toString(17));
+                    tc18.setText(Integer.toString(18));
+                    tc19.setText(Integer.toString(19));
+                    tc20.setText(Integer.toString(20));
+                    tc21.setText(Integer.toString(21));
+                    tc22.setText(Integer.toString(22));
+                    tc23.setText(Integer.toString(23));
+                    tc24.setText(Integer.toString(24));
+                Double[] hhh = new Double[25];
+                Double[] xax = new Double[25];
                 //hhh[1] = Double.parseDouble(txtWaktu.getText().toString());
                 int j=0;
-                for (int i= 0 ; i <=20 ; i++){
-                    hhh[i]= Double.valueOf(j+=5);
-                    xax[i] = (R/24) * Math.cbrt(Math.pow((24/(hhh[i]/60)),2));
+                for (int i= 0 ; i <=24 ; i++){
+                    hhh[i]= Double.valueOf(j+=1);
+                    xax[i] = (R/24) * Math.cbrt(Math.pow((24/(hhh[i])),2));
                 }
                 DecimalFormat precision = new DecimalFormat("#.#####");
                // ih1.setText(precision.format(xax[1]));
@@ -149,6 +162,10 @@ public class MainActivity extends AppCompatActivity {
                 ih18.setText(precision.format(xax[17]));
                 ih19.setText(precision.format(xax[18]));
                 ih20.setText(precision.format(xax[19]));
+                ih21.setText(precision.format(xax[20]));
+                ih22.setText(precision.format(xax[21]));
+                ih23.setText(precision.format(xax[22]));
+                ih24.setText(precision.format(xax[23]));
                 final Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
                 Bundle c = new Bundle();
                 //untuk menyimpan data debit

@@ -144,7 +144,7 @@
                     <TextView
                         android:layout_width="137dp"
                         android:layout_height="45dp"
-                        android:text="d (kedalaman existing sungai)"
+                        android:text="d (Kedalaman Existing Sungai)"
                         android:textSize="16sp"
                         tools:ignore="HardcodedText" />
 
@@ -157,8 +157,9 @@
                             android:id="@+id/txtKedalamanSungai"
                             android:layout_width="123dp"
                             android:layout_height="wrap_content"
-                            android:hint="lihat tabel"
+                            android:hint="pengukuran langsung"
                             android:inputType="number|numberDecimal"
+                            android:textSize="12sp"
                             tools:ignore="LabelFor" />
 
                         <TextView
@@ -188,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="n (manning)"
+                        android:text="n (Koefisien Manning)"
                         android:textSize="16sp"
                         tools:ignore="HardcodedText" />
 
@@ -198,7 +199,8 @@
                         android:layout_height="wrap_content"
                         android:hint="lihat tabel"
                         android:inputType="number|numberDecimal"
-                        tools:ignore="HardcodedText,LabelFor" />
+                        tools:ignore="HardcodedText,LabelFor"
+                        android:autofillHints="" />
 
                 </LinearLayout>
 
@@ -213,7 +215,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="b"
+                        android:text="b (lihat gambar)"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
 
@@ -257,9 +259,9 @@
                     android:paddingBottom="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="142dp"
                         android:layout_height="wrap_content"
-                        android:text="So (Kemiringan Dasar) "
+                        android:text="So (Kemiringan Sungai) "
                         android:textSize="16sp"
                         tools:ignore="HardcodedText" />
 
@@ -348,7 +350,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="h"
+                        android:text="h (lihat gambar)"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
 
@@ -388,9 +390,9 @@
                     android:padding="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="134dp"
                         android:layout_height="wrap_content"
-                        android:text="m"
+                        android:text="m (lihat gambar dan tabel)"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
 
@@ -427,7 +429,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="y"
+                        android:text="y (lihat gambar)"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
 
@@ -469,7 +471,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="range"
+                        android:text="Range y1 ke y2"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
 
@@ -515,7 +517,7 @@
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="9.80665 m/S²"
+                        android:text="9.80665 m/s²"
                         tools:ignore="HardcodedText" />
 
                 </LinearLayout>
@@ -548,12 +550,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/border"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
 
                     <TextView
                         android:layout_width="151dp"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="D"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
@@ -570,12 +574,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/border"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="10dp">
 
                     <TextView
                         android:layout_width="138dp"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="B"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
@@ -632,6 +638,7 @@
             android:id="@+id/btnNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:text="Next"
             tools:ignore="HardcodedText" />
 

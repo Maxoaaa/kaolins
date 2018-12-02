@@ -56,19 +56,58 @@ public class Main3Activity extends AppCompatActivity {
                 double B, D, E1, E2, y2, V, A, Sf, R, P, DeltaX;
                 double d, n, brSaluran, so, alpha, y, s, h, range, y1, m, Qc1, debit, S;
 
-                d = Double.parseDouble(txtKedalamanSungai.getText().toString());
-                n = Double.parseDouble(txtManning.getText().toString());
-                brSaluran = Double.parseDouble(txtLebarSaluran.getText().toString());
-                so = Double.parseDouble(txtso.getText().toString());
-                alpha = Double.parseDouble(txtKoefisienKecepatan.getText().toString());
+                if (txtKedalamanSungai.getText().toString().isEmpty()){
+                    d = 0 ;
+                }else {
+                    d = Double.parseDouble(txtKedalamanSungai.getText().toString());
+                }
+                if (txtManning.getText().toString().isEmpty()){
+                    n = 0 ;
+                }else {
+                    n = Double.parseDouble(txtManning.getText().toString());
+                }
+                if (txtLebarSaluran.getText().toString().isEmpty()){
+                    brSaluran = 0 ;
+                }else {
+                    brSaluran = Double.parseDouble(txtLebarSaluran.getText().toString());
+                }
+                if (txtso.getText().toString().isEmpty()){
+                    so = 0 ;
+                }else {
+                    so = Double.parseDouble(txtso.getText().toString());
+                }
+                if (txtKoefisienKecepatan.getText().toString().isEmpty()){
+                    alpha = 0 ;
+                }else {
+                    alpha = Double.parseDouble(txtKoefisienKecepatan.getText().toString());
+                }
+                if (txtTinggiJagaan.getText().toString().isEmpty()){
+                    s = 0 ;
+                }else {
+                    s = Double.parseDouble(txtTinggiJagaan.getText().toString());
+                }
+                if (txth.getText().toString().isEmpty()){
+                    h = 0 ;
+                }else {
+                    h = Double.parseDouble(txth.getText().toString());
+                }
+                if (txtm.getText().toString().isEmpty()){
+                    m = 0 ;
+                }else {
+                    m = Double.parseDouble(txtm.getText().toString());
+                }
+                if (txty1.getText().toString().isEmpty()){
+                    y1 = 0 ;
+                }else {
+                    y1 = Double.parseDouble(txty1.getText().toString());
+                }
+                if (txtrange.getText().toString().isEmpty()){
+                    range = 0 ;
+                }else {
+                    range = Double.parseDouble(txtrange.getText().toString());
+                }
                 //y = Double.parseDouble(txtKedalamanSungaiHulu.getText().toString());
-                s = Double.parseDouble(txtTinggiJagaan.getText().toString());
-                h = Double.parseDouble(txth.getText().toString());
-                range = Double.parseDouble(txtrange.getText().toString());
-                y1 = Double.parseDouble(txty1.getText().toString());
-                m = Double.parseDouble(txtm.getText().toString());
                 debit = Double.parseDouble( b.getString("Debitku"));
-
 
                 A = h * (brSaluran + (m*h));
                 V = debit / A ;
