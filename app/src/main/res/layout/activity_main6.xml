@@ -31,12 +31,12 @@
     <TextView
         android:id="@+id/textView25"
         android:layout_width="130dp"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_vertical"
-        android:text="Stasiun Hujan"
+        android:text="L. Stasiun Hujan"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/spinner2"
         app:layout_constraintHorizontal_bias="0.333"
@@ -76,7 +76,7 @@
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Stasiun Hujan (A1)"
+                    android:text="L. Stasiun Hujan (A1)"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -135,7 +135,7 @@
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Stasiun Hujan (A2)"
+                    android:text="L. Stasiun Hujan (A2)"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -195,7 +195,7 @@
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Stasiun Hujan (A3)  :"
+                    android:text="L. Stasiun Hujan (A3)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -255,7 +255,7 @@
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Stasiun Hujan (A4)  :"
+                    android:text="L. Stasiun Hujan (A4)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -315,7 +315,7 @@
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Stasiun Hujan (A5)  :"
+                    android:text="L. Stasiun Hujan (A5)  :"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -392,19 +392,26 @@
             app:layout_constraintTop_toBottomOf="@+id/scrollView2"
             tools:ignore="HardcodedText,MissingConstraints" />
 
-        <TextView
-            android:id="@+id/txthasil"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="Hasil"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            tools:ignore="HardcodedText,MissingConstraints" />
+            android:layout_height="match_parent"
+            android:background="@drawable/border_hasil"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txthasil"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Hasil"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                tools:ignore="HardcodedText,MissingConstraints" />
+        </LinearLayout>
 
     </LinearLayout>
 

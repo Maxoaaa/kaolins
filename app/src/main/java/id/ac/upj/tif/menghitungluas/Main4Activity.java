@@ -54,7 +54,12 @@ public class Main4Activity extends AppCompatActivity {
                 volume = D*B* DX;
                 //txtHasil.setText("Volume Tampung : " + volume);
                 namaValue.setText(""+volume);
-
+               // Bundle d = new Bundle();
+                /*d.putString("ProfilMukaAirD", String.valueOf(D));
+                d.putString("ProfilMukaAirDX", String.valueOf(DX));
+                d.putString("ProfilMukaAirB", String.valueOf(B));*/
+                //d.putString("koefisenku", Double.toString(C));
+                //intent.putExtras(d);
             }
         });
         btn_float.setOnClickListener(new View.OnClickListener() {

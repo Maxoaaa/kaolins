@@ -55,4 +55,7 @@
     <string name="rerata_deskripsi">Metode ini berdasarkan rata-rata timbangan (weighted average). Metode polygon thiessen ini memberi proporsi terhadap luasan daerah pengaruh stasiun hujan untuk mengakomodasi ketidaksamaan pada jarak. Metode ini didasarkan pada asumsi bahwa variasi hujan antara stasiun hujan yang satu dengan lainnya adalah linear dan stasiun hujannya dianggap dapat mewakili kawasan terdekat (Suripin, 2004).Untuk pemilihan metode perhitungan curah hujan rata-rata memakai Metode Polygon Thiessen</string>
     <string name="image_intensitas">image_intensitas</string>
     <string name="close">close</string>
+    <string name="titik2">...</string>
+    <string name="hasil">Hasil</string>
+    <string name="mm">mm</string>
 </resources>

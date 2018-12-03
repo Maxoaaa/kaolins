@@ -23,9 +23,9 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3b);
 
-        final Bundle b = getIntent().getExtras();
+        final Bundle beva = getIntent().getExtras();
         TextView debit =  findViewById(R.id.namaValue);
-        debit.setText(b.getCharSequence("Debitku")+" m3/s");
+        debit.setText(beva.getCharSequence("Debitku")+" m3/s");
 
         txtKedalamanSungai = findViewById(R.id.txtKedalamanSungai);
         txtManning = findViewById(R.id.txtManning);
@@ -107,7 +107,7 @@ public class Main3Activity extends AppCompatActivity {
                     range = Double.parseDouble(txtrange.getText().toString());
                 }
                 //y = Double.parseDouble(txtKedalamanSungaiHulu.getText().toString());
-                debit = Double.parseDouble( b.getString("Debitku"));
+                debit = Double.parseDouble( beva.getString("Debitku"));
 
                 A = h * (brSaluran + (m*h));
                 V = debit / A ;
@@ -140,7 +140,8 @@ public class Main3Activity extends AppCompatActivity {
                 //String hasil2 = new Double(H).toString();
                 e.putString("ProfilMukaAirD", hasil1);
                 e.putString("ProfilMukaAirDX", hasil2);
-                e.putString("ProfilMukaAirB", hasil3);
+                e.putString("ProfilMukaAirB", beva.getString("Debitku"));
+                //e.putString("Debitku", hasil3);
                 //e.putString("Haha", hasil2);
                 intent.putExtras(e);
                 //memulai Activity ketiga

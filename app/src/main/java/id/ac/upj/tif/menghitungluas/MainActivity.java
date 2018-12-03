@@ -17,14 +17,16 @@ public class MainActivity extends AppCompatActivity {
     EditText txtCurah, txtWaktu;
     Button btnHitung, btnNext;
     FloatingActionButton btn_float;
+
+    private int REQUEST_CODE = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Bundle b = getIntent().getExtras();
+        final Bundle bave = getIntent().getExtras();
         txtCurah =  findViewById(R.id.txtCurah);
-        txtCurah.setText(b.getCharSequence("Rerata_hujan"));
+        txtCurah.setText(bave.getCharSequence("Rerata_hujan"));
 
         btn_float = findViewById(R.id.btn_float);
         txtHasil = findViewById(R.id.txtHasil);
@@ -171,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 //untuk menyimpan data debit
                 String hasil = Double.valueOf(x).toString();
                 c.putString("Intensitasku", hasil);
+                //c.putString("Rerata_hujan", bave.getString("Rerata_hujan"));
                 intent.putExtras(c);
                 //memulai Activity kedua
                 //startActivity(intent);
@@ -199,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
 
     }
 

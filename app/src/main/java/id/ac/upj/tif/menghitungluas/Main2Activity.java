@@ -2,21 +2,14 @@ package id.ac.upj.tif.menghitungluas;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import id.ac.upj.tif.menghitungluas.penjelasan.intensitasDialogFragment;
+import android.widget.Spinner;
 
 
 public class Main2Activity extends AppCompatActivity {
@@ -25,6 +18,10 @@ public class Main2Activity extends AppCompatActivity {
     Button btnHitung;
     FloatingActionButton btn_float;
     Spinner spinner;
+
+    public static String EXTRA_SELECTED_VALUE = "extra_selected_value";
+    public static int RESULT_CODE = 110;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,14 +71,17 @@ public class Main2Activity extends AppCompatActivity {
                 txtHasil.setText("Debit Banjir Maks: " +Qs+" m³/s");
 
                 Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
-                Intent koefisi = new Intent(getApplicationContext(), Main4Activity.class);
+                Intent intentv2 = new Intent(getApplicationContext(), Main2Activity.class);
+                //Intent koefisi = new Intent(getApplicationContext(), Main4Activity.class);
                 Bundle d = new Bundle();
 
                 //untuk menyimpan data debit
                 String hasil = new Double(Qs).toString();
                 d.putString("Debitku", hasil);
-                d.putString("koefisenku", Double.toString(C));
+                //d.putString("Intensitasku",  b.getString("Intensitasku"));
+                //d.putString("koefisenku", Double.toString(C));
                 intent.putExtras(d);
+                //intentv2.putExtras(d);
                 //memulai Activity ketiga
                 startActivity(intent);
             }
