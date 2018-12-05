@@ -1,6 +1,8 @@
 package id.ac.upj.tif.menghitungluas;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,8 @@ public class Main6aActivity extends AppCompatActivity {
     EditText txtX1,txtX2,txtX3,txtX4,txtX5,txtX6,txtX7,txtX8,txtX9,txtX10,txtXi;
     EditText txtYtr,txtSn, txtYn;
     TextView hasilAveX,hasilAveX1, hasilKtr,hasilSd,hasilXtr;
+    FloatingActionButton btn_float;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,9 @@ public class Main6aActivity extends AppCompatActivity {
 
         btnNext = findViewById(R.id.btnNext);
         btnHitung3 = findViewById(R.id.btnHitung3);
+        btnHitung = findViewById(R.id.btnHitung);
+        btn_float = findViewById(R.id.btn_float);
+
         final Bundle bave = getIntent().getExtras();
         txtX1 =  findViewById(R.id.txtX1);
         txtX2 =  findViewById(R.id.txtX2);
@@ -63,6 +70,7 @@ public class Main6aActivity extends AppCompatActivity {
                 totalX = (X1 + X2 +X3 + X4 +X5 +X6 + X7 +X8 +X9 +X10 ) /10;
                 XiXa = Xi - totalX;
 
+                hasilAveX.setText(Double.toString(totalX));
                 hasilAveX1.setText(Double.toString(XiXa));
 
                 txtYtr =  findViewById(R.id.txtYtr);
@@ -103,7 +111,23 @@ public class Main6aActivity extends AppCompatActivity {
                 });
             }
         });
-
+        btn_float.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main6aActivity.this);
+                dialog.setContentView(R.layout.fragment_gumbel);
+                dialog.setTitle("Distribusi Gumbel");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
 
 
 

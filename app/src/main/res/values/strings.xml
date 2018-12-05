@@ -58,4 +58,5 @@
     <string name="titik2">...</string>
     <string name="hasil">Hasil</string>
     <string name="mm">mm</string>
+    <string name="deskripsi_gumbel">Metode Gumbel diciptakan oleh E.J.Gumbel pada tahun 1941. Metode Gumbel banyak digunakan untuk analisis data maksimum, pada metode ini data yang diolah diasumsikan mempunyai seberan tertentu yang disebut sebaran Gumbel.</string>
 </resources>
