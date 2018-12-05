@@ -49,23 +49,18 @@ public class Main6aActivity extends AppCompatActivity {
                 final double X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,totalX,Xi ,XiXa;
                 //double Rerata_hujan;
 
-                /*if (txtLuas.getText().toString().isEmpty()){
-                    A = 0 ;
-                }else {
-                    A = Double.parseDouble(txtLuas.getText().toString());
-                }*/
+                if (txtX1.getText().toString().isEmpty()){ X1 = 0 ; }else { X1 = Double.parseDouble(txtX1.getText().toString()); }
+                if (txtX2.getText().toString().isEmpty()){ X2 = 0 ; }else { X2 = Double.parseDouble(txtX2.getText().toString()); }
+                if (txtX3.getText().toString().isEmpty()){ X3 = 0 ; }else { X3 = Double.parseDouble(txtX3.getText().toString()); }
+                if (txtX4.getText().toString().isEmpty()){ X4 = 0 ; }else { X4 = Double.parseDouble(txtX4.getText().toString()); }
+                if (txtX5.getText().toString().isEmpty()){ X5 = 0 ; }else { X5 = Double.parseDouble(txtX5.getText().toString()); }
+                if (txtX6.getText().toString().isEmpty()){ X6 = 0 ; }else { X6 = Double.parseDouble(txtX6.getText().toString()); }
+                if (txtX7.getText().toString().isEmpty()){ X7 = 0 ; }else { X7 = Double.parseDouble(txtX7.getText().toString()); }
+                if (txtX8.getText().toString().isEmpty()){ X8 = 0 ; }else { X8 = Double.parseDouble(txtX8.getText().toString()); }
+                if (txtX9.getText().toString().isEmpty()){ X9 = 0 ; }else { X9 = Double.parseDouble(txtX8.getText().toString()); }
+                if (txtX10.getText().toString().isEmpty()){ X10 = 0 ; }else { X10 = Double.parseDouble(txtX10.getText().toString()); }
+                if (txtXi.getText().toString().isEmpty()){ Xi = 0 ; }else { Xi = Double.parseDouble(txtXi.getText().toString()); }
                 //Rerata_hujan = Double.parseDouble( bave.getString("Rerata_hujan"));
-                X1 = Double.parseDouble(txtX1.getText().toString());
-                X2= Double.parseDouble(txtX2.getText().toString());
-                X3= Double.parseDouble(txtX3.getText().toString());
-                X4= Double.parseDouble(txtX4.getText().toString());
-                X5= Double.parseDouble(txtX5.getText().toString());
-                X6= Double.parseDouble(txtX6.getText().toString());
-                X7= Double.parseDouble(txtX7.getText().toString());
-                X8= Double.parseDouble(txtX8.getText().toString());
-                X9= Double.parseDouble(txtX9.getText().toString());
-                X10= Double.parseDouble(txtX10.getText().toString());
-                Xi= Double.parseDouble(txtXi.getText().toString());
 
                 totalX = (X1 + X2 +X3 + X4 +X5 +X6 + X7 +X8 +X9 +X10 ) /10;
                 XiXa = Xi - totalX;
@@ -84,9 +79,9 @@ public class Main6aActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         double  Ytr, Sn, Yn,Ktr, Sd, Xtr;
-                        Ytr = Double.parseDouble(txtYtr.getText().toString());
-                        Sn = Double.parseDouble(txtSn.getText().toString());
-                        Yn = Double.parseDouble(txtYn.getText().toString());
+                        if (txtYtr.getText().toString().isEmpty()){ Ytr = 0 ; }else { Ytr = Double.parseDouble(txtYtr.getText().toString()); }
+                        if (txtSn.getText().toString().isEmpty()){ Sn = 0 ; }else { Sn = Double.parseDouble(txtSn.getText().toString()); }
+                        if (txtYn.getText().toString().isEmpty()){ Yn = 0 ; }else { Yn = Double.parseDouble(txtYn.getText().toString()); }
 
                         Ktr = (Ytr - Yn) /Sn;
                         Sd = Math.sqrt( Math.pow((XiXa / 9),2)  )  ;
