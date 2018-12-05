@@ -19,6 +19,7 @@ public class Main6aActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main6a);
 
         btnNext = findViewById(R.id.btnNext);
+        btnHitung3 = findViewById(R.id.btnHitung3);
         final Bundle bave = getIntent().getExtras();
         txtX1 =  findViewById(R.id.txtX1);
         txtX2 =  findViewById(R.id.txtX2);
@@ -33,17 +34,12 @@ public class Main6aActivity extends AppCompatActivity {
         txtXi =  findViewById(R.id.txtXi);
         hasilAveX =  findViewById(R.id.hasilAveX);
         hasilAveX1 =  findViewById(R.id.hasilAveX1);
-        txtYtr =  findViewById(R.id.txtYtr);
-        txtSn =  findViewById(R.id.txtSn);
-        txtYn =  findViewById(R.id.txtYn);
-        hasilKtr =  findViewById(R.id.hasilKtr);
-        hasilSd =  findViewById(R.id.hasilSd);
-        hasilXtr =  findViewById(R.id.hasilXtr);
+
 
         btnHitung3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,totalX,Xi ,XiXa;
+                final double X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,totalX,Xi ,XiXa;
                 //double Rerata_hujan;
 
                 /*if (txtLuas.getText().toString().isEmpty()){
@@ -69,22 +65,33 @@ public class Main6aActivity extends AppCompatActivity {
 
                 hasilAveX1.setText(Double.toString(XiXa));
 
-
+                txtYtr =  findViewById(R.id.txtYtr);
+                txtSn =  findViewById(R.id.txtSn);
+                txtYn =  findViewById(R.id.txtYn);
+                hasilKtr =  findViewById(R.id.hasilKtr);
+                hasilSd =  findViewById(R.id.hasilSd);
+                hasilXtr =  findViewById(R.id.hasilXtr);
 
                 btnHitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double  Ytr, Sn, Yn,Ktr;
+                        double  Ytr, Sn, Yn,Ktr, Sd, Xtr;
                         Ytr = Double.parseDouble(txtYtr.getText().toString());
                         Sn = Double.parseDouble(txtSn.getText().toString());
                         Yn = Double.parseDouble(txtYn.getText().toString());
 
                         Ktr = (Ytr - Yn) /Sn;
+                        Sd = Math.sqrt( Math.pow((XiXa / 9),2)  )  ;
+                        Xtr = totalX * (Ktr * Sd);
+
+
                         hasilKtr.setText(Double.toString(Ktr));
+                        hasilSd.setText(Double.toString(Sd));
+                        hasilXtr.setText(Double.toString(Xtr));
+
 
                         final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         Bundle c = new Bundle();
-
                         c.putString("Rerata_hujan", String.valueOf(bave));
                         intent.putExtras(c);
                         btnNext.setOnClickListener(new View.OnClickListener() {
