@@ -43,6 +43,7 @@ android:layout_height="match_parent">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginRight="2dp"
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
@@ -55,10 +56,11 @@ android:layout_height="match_parent">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
             android:clickable="true"
             android:focusable="true"
             app:backgroundTint="@color/colorAccent_light"
-            app:srcCompat="@drawable/ic_info_black_24dp"
+            app:srcCompat="@drawable/ic_filter_1_black_24dp"
             tools:ignore="RtlHardcoded,VectorDrawableCompat" />
     </LinearLayout>
 
@@ -908,7 +910,7 @@ android:layout_height="match_parent">
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/colorBlue_old"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
