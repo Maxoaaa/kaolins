@@ -39,6 +39,18 @@ android:layout_height="match_parent">
         android:orientation="horizontal">
 
         <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_float5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorAccent_light"
+            app:srcCompat="@drawable/ic_info_black_24dp"
+            tools:ignore="RtlHardcoded,VectorDrawableCompat" />
+
+        <android.support.design.widget.FloatingActionButton
             android:id="@+id/btn_float"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,19 +60,6 @@ android:layout_height="match_parent">
             app:backgroundTint="@color/colorAccent_light"
             app:srcCompat="@drawable/ic_info_black_24dp"
             tools:ignore="RtlHardcoded,VectorDrawableCompat" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btn_float5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:focusable="true"
-            app:backgroundTint="@color/colorAccent_light"
-            app:srcCompat="@drawable/ic_filter_1_black_24dp"
-            tools:ignore="RtlHardcoded,VectorDrawableCompat" />
-
     </LinearLayout>
 
     <TextView

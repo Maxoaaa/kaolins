@@ -128,7 +128,7 @@ public class Main6aActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final Dialog dialog = new Dialog(Main6aActivity.this);
-                dialog.setContentView(R.layout.fragment_gumbel_dialog);
+                dialog.setContentView(R.layout.fragment_gumbel);
                 dialog.setTitle("Tabel");
                 Button tutup = dialog.findViewById(R.id.btn_close);
                 tutup.setVisibility(View.VISIBLE);
