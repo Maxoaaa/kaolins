@@ -71,7 +71,7 @@ public class Main2Activity extends AppCompatActivity {
                 txtHasil.setText("Debit Banjir Maks: " +Qs+" m³/s");
 
                 Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
-                Intent intentv2 = new Intent(getApplicationContext(), Main2Activity.class);
+                //Intent intentv2 = new Intent(getApplicationContext(), Main2Activity.class);
                 //Intent koefisi = new Intent(getApplicationContext(), Main4Activity.class);
                 Bundle d = new Bundle();
 

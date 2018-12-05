@@ -183,7 +183,7 @@ public class Main6Activity extends AppCompatActivity {
 
                 txthasil.setText(Double.toString(R));
 
-                final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                final Intent intent = new Intent(getApplicationContext(), Main6aActivity.class);
                 Bundle c = new Bundle();
                 //untuk menyimpan data debit
                 String hasil = Double.valueOf(R).toString();

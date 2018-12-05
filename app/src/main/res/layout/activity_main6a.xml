@@ -77,8 +77,8 @@ android:layout_height="match_parent">
                         android:layout_height="48dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:hint="@string/titik2"
                         android:inputType="textPersonName"
-                        android:text="@string/titik2"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -113,8 +113,8 @@ android:layout_height="match_parent">
                         android:layout_height="48dp"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:hint="@string/titik2"
                         android:inputType="textPersonName"
-                        android:text="@string/titik2"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -402,7 +402,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:inputType="textPersonName"
-                        android:text="..."
+                        android:text="@string/titik2"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -415,6 +415,57 @@ android:layout_height="match_parent">
 
     <!--android:inputType="number"-->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Xi"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/border_hasil2"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp">
+
+            <EditText
+                android:id="@+id/txtXi"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="pilih X diatas"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="mm"
+            android:textSize="18sp"
+            tools:ignore="InefficientWeight" />
+    </LinearLayout>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -423,7 +474,8 @@ android:layout_height="match_parent">
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="@string/hasil"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -461,7 +513,7 @@ android:layout_height="match_parent">
                 android:layout_marginRight="7dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/titik2"
+                android:text="@string/hasil"
                 android:textSize="18sp"
                 tools:ignore="InefficientWeight" />
         </LinearLayout>
@@ -480,57 +532,6 @@ android:layout_height="match_parent">
             android:textSize="18sp"
             tools:ignore="InefficientWeight" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Xi"
-            android:textSize="18sp"
-            android:layout_marginStart="5dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/border_hasil2"
-            android:orientation="vertical"
-            android:layout_marginStart="5dp">
-
-            <EditText
-                android:id="@+id/txtXi"
-                android:layout_width="137dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="contoh : 101.7 "
-                android:inputType="textPersonName" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="mm"
-            android:textSize="18sp"
-            tools:ignore="InefficientWeight" />
-    </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -561,9 +562,10 @@ android:layout_height="match_parent">
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginRight="7dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/titik2"
+                android:text="@string/hasil"
                 android:textSize="18sp"
                 tools:ignore="InefficientWeight" />
         </LinearLayout>
@@ -633,7 +635,7 @@ android:layout_height="match_parent">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="contoh : 101.7 "
+                android:hint="Lihat Tabel"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -682,7 +684,7 @@ android:layout_height="match_parent">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="contoh : 101.7 "
+                android:hint="Lihat Tabel"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -731,7 +733,7 @@ android:layout_height="match_parent">
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="contoh : 101.7 "
+                android:hint="Lihat Tabel"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -780,9 +782,10 @@ android:layout_height="match_parent">
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginRight="7dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/titik2"
+                android:text="@string/hasil"
                 android:textSize="18sp"
                 tools:ignore="InefficientWeight" />
 
@@ -847,7 +850,7 @@ android:layout_height="match_parent">
                 android:layout_marginRight="7dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/titik2"
+                android:text="@string/hasil"
                 android:textSize="18sp"
                 tools:ignore="InefficientWeight" />
         </LinearLayout>
@@ -912,7 +915,7 @@ android:layout_height="match_parent">
                 android:layout_marginRight="7dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/titik2"
+                android:text="@string/hasil"
                 android:textSize="18sp"
                 tools:ignore="InefficientWeight" />
         </LinearLayout>
