@@ -60,7 +60,7 @@ android:layout_height="match_parent">
             android:clickable="true"
             android:focusable="true"
             app:backgroundTint="@color/colorAccent_light"
-            app:srcCompat="@drawable/ic_info_black_24dp"
+            app:srcCompat="@drawable/ic_filter_1_black_24dp"
             tools:ignore="RtlHardcoded,VectorDrawableCompat" />
     </LinearLayout>
 
@@ -764,7 +764,7 @@ android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/txtYn"
-                android:layout_width="137dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
