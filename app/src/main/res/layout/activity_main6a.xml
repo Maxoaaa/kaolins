@@ -31,6 +31,38 @@ android:layout_height="match_parent">
      </HorizontalScrollView>-->
 
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_float"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorAccent_light"
+            app:srcCompat="@drawable/ic_info_black_24dp"
+            tools:ignore="RtlHardcoded,VectorDrawableCompat" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_float5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorAccent_light"
+            app:srcCompat="@drawable/ic_filter_1_black_24dp"
+            tools:ignore="RtlHardcoded,VectorDrawableCompat" />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -466,6 +498,14 @@ android:layout_height="match_parent">
     </LinearLayout>
 
 
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorBlue_old"
+        android:visibility="visible" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -547,7 +587,7 @@ android:layout_height="match_parent">
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:gravity="center"
-            android:text="X1 - Average X  :"
+            android:text="Xi - Average X  :"
             android:textSize="16sp" />
 
         <LinearLayout
@@ -584,12 +624,6 @@ android:layout_height="match_parent">
             android:textSize="18sp"
             tools:ignore="InefficientWeight" />
     </LinearLayout>
-    <View
-
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/colorBlue_old"
-        android:visibility="visible" />
 
     <Button
         android:id="@+id/btnHitung3"
@@ -950,16 +984,5 @@ android:layout_height="match_parent">
         android:text="Next"
         tools:ignore="HardcodedText" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btn_float"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:backgroundTint="@color/colorAccent_light"
-        app:srcCompat="@drawable/ic_info_black_24dp"
-        tools:ignore="RtlHardcoded,VectorDrawableCompat" />
 </LinearLayout>
 </ScrollView>

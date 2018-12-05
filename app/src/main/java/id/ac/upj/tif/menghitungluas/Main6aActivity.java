@@ -15,7 +15,7 @@ public class Main6aActivity extends AppCompatActivity {
     EditText txtX1,txtX2,txtX3,txtX4,txtX5,txtX6,txtX7,txtX8,txtX9,txtX10,txtXi;
     EditText txtYtr,txtSn, txtYn;
     TextView hasilAveX,hasilAveX1, hasilKtr,hasilSd,hasilXtr;
-    FloatingActionButton btn_float;
+    FloatingActionButton btn_float,btn_float5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class Main6aActivity extends AppCompatActivity {
         btnHitung3 = findViewById(R.id.btnHitung3);
         btnHitung = findViewById(R.id.btnHitung);
         btn_float = findViewById(R.id.btn_float);
+        btn_float5 = findViewById(R.id.btn_float5);
 
         final Bundle bave = getIntent().getExtras();
         txtX1 =  findViewById(R.id.txtX1);
@@ -94,7 +95,7 @@ public class Main6aActivity extends AppCompatActivity {
 
                         final Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                         Bundle c = new Bundle();
-                        c.putString("Rerata_hujan", String.valueOf(bave));
+                        c.putString("Rerata_hujan", bave.getString("Rerata_hujan"));
                         intent.putExtras(c);
                         btnNext.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -112,6 +113,23 @@ public class Main6aActivity extends AppCompatActivity {
                 final Dialog dialog = new Dialog(Main6aActivity.this);
                 dialog.setContentView(R.layout.fragment_gumbel);
                 dialog.setTitle("Distribusi Gumbel");
+                Button tutup = dialog.findViewById(R.id.btn_close);
+                tutup.setVisibility(View.VISIBLE);
+                tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
+        btn_float5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(Main6aActivity.this);
+                dialog.setContentView(R.layout.fragment_gumbel_dialog);
+                dialog.setTitle("Tabel");
                 Button tutup = dialog.findViewById(R.id.btn_close);
                 tutup.setVisibility(View.VISIBLE);
                 tutup.setOnClickListener(new View.OnClickListener() {
