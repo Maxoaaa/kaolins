@@ -84,7 +84,6 @@ public class Main6aActivity extends AppCompatActivity {
                         Sd = Math.sqrt( Math.pow((XiXa / 9),2)  )  ;
                         Xtr = totalX * (Ktr * Sd);
 
-
                         hasilKtr.setText(Double.toString(Ktr));
                         hasilSd.setText(Double.toString(Sd));
                         hasilXtr.setText(Double.toString(Xtr));
