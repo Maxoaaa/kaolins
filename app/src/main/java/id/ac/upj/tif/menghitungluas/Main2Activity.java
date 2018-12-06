@@ -67,7 +67,7 @@ public class Main2Activity extends AppCompatActivity {
                 //tc = to + td;
                 //Cs = (2 * tc) / ((2 * tc )+ td);
 
-                Qs = 0.00278 * C * intensitas *  A;
+                Qs = 0.278 * C * intensitas *  A;
                 txtHasil.setText("Debit Banjir Maks: " +Qs+" m³/s");
 
                 Intent intent = new Intent(getApplicationContext(), Main3Activity.class);

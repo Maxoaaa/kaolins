@@ -39,7 +39,7 @@ android:layout_height="match_parent">
         android:orientation="horizontal">
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btn_float5"
+            android:id="@+id/btn_float"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -52,7 +52,7 @@ android:layout_height="match_parent">
             tools:ignore="RtlHardcoded,VectorDrawableCompat" />
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/btn_float"
+            android:id="@+id/btn_float5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
