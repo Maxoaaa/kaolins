@@ -31,7 +31,9 @@
             android:name=".Main5Activity"
             android:label="VoLoS"
             android:theme="@style/AppTheme.NoActionBar">
+
             <!-- android:launchMode="singleTop" -->
+
 
             <!--
              <intent-filter>
@@ -81,12 +83,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Main5Activity" />
         </activity>
-        <activity android:name=".Main6aActivity"
+        <activity
+            android:name=".Main6aActivity"
             android:label="Distribusi Gumbel"
             android:parentActivityName=".Main5Activity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Main5Activity" />
+        </activity>
+        <activity android:name=".Main6a_t_hasil"
+            android:label="Distribusi Gumbel"
+            android:parentActivityName=".Main6aActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Main6aActivity" />
         </activity>
     </application>
 

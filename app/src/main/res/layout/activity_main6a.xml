@@ -111,7 +111,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="number|numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -147,7 +147,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="number|numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -182,7 +182,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="number|numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -217,7 +217,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -252,7 +252,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -294,7 +294,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -330,7 +330,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="Autofill,InefficientWeight,LabelFor" />
 
                 </LinearLayout>
@@ -365,7 +365,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -400,7 +400,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -435,7 +435,7 @@ android:layout_height="match_parent">
                         android:layout_weight="1"
                         android:gravity="center"
                         android:hint="@string/titik2"
-                        android:inputType="textPersonName"
+                        android:inputType="numberDecimal"
                         tools:ignore="InefficientWeight" />
 
                 </LinearLayout>
@@ -480,7 +480,7 @@ android:layout_height="match_parent">
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="pilih X diatas"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <TextView
@@ -671,7 +671,7 @@ android:layout_height="match_parent">
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Lihat Tabel"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <TextView
@@ -684,7 +684,6 @@ android:layout_height="match_parent">
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="mm"
             android:textSize="18sp"
             tools:ignore="InefficientWeight" />
     </LinearLayout>
@@ -693,54 +692,6 @@ android:layout_height="match_parent">
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Sn"
-            android:textSize="18sp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/border_hasil2"
-            android:orientation="vertical"
-            android:layout_marginStart="5dp">
-
-            <EditText
-                android:id="@+id/txtSn"
-                android:layout_width="137dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Lihat Tabel"
-                android:inputType="textPersonName" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="mm"
-            android:textSize="18sp"
-            tools:ignore="InefficientWeight" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:orientation="horizontal"
         tools:ignore="TooManyViews">
 
@@ -764,12 +715,12 @@ android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/txtYn"
-                android:layout_width="match_parent"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Lihat Tabel"
-                android:inputType="textPersonName" />
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
         <TextView
@@ -782,7 +733,53 @@ android:layout_height="match_parent">
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="mm"
+            android:textSize="18sp"
+            tools:ignore="InefficientWeight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Sn"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/border_hasil2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtSn"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Lihat Tabel"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:textSize="18sp"
             tools:ignore="InefficientWeight" />
     </LinearLayout>
@@ -900,7 +897,6 @@ android:layout_height="match_parent">
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="mm"
             android:textSize="18sp"
             tools:ignore="InefficientWeight" />
     </LinearLayout>
@@ -975,6 +971,13 @@ android:layout_height="match_parent">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hitung"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hasil dalam Tabel"
         tools:ignore="HardcodedText" />
 
     <Button
