@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class Main4Activity extends AppCompatActivity {
     TextView txtHasil,namaValue;
     EditText txtLuas;
@@ -19,15 +21,27 @@ public class Main4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
-        final Bundle b = getIntent().getExtras();
         //TextView kyuc =  findViewById(R.id.namaValue);
         EditText Mercu =  findViewById(R.id.txtMercu);
         EditText PanjangSungai =  findViewById(R.id.txtPanjangSungai);
         EditText jarakTampang =  findViewById(R.id.txtjarakTampang);
+
+        final Bundle b = getIntent().getExtras();
+        final DecimalFormat precision = new DecimalFormat("#.###");
+        String abc =b.getString("ProfilMukaAirD");
+        String abc2 =b.getString("ProfilMukaAirDX");
+        String abc3 =b.getString("ProfilMukaAirB");
+        final Double abe = Double.valueOf(b.getString("ProfilMukaAirD"));
+        final Double abe2 = Double.valueOf(b.getString("ProfilMukaAirDX"));
+        final Double abe3 = Double.valueOf(b.getString("ProfilMukaAirB"));
+        String abd = precision.format(Double.parseDouble(abc));
+        String abd2 = precision.format(Double.parseDouble(abc2));
+        String abd3 = precision.format(Double.parseDouble(abc3));
+
         //kyuc.setText(b.getCharSequence("ProfilMukaAirD"));
-        Mercu.setText(b.getCharSequence("ProfilMukaAirD"));
-        jarakTampang.setText(b.getCharSequence("ProfilMukaAirDX"));
-        PanjangSungai.setText(b.getCharSequence("ProfilMukaAirB"));
+        Mercu.setText(abd);
+        PanjangSungai.setText(abd3);
+        jarakTampang.setText(abd2);
 
         txtHasil = findViewById(R.id.txtHasil);
         namaValue = findViewById(R.id.namaValue);
@@ -53,7 +67,8 @@ public class Main4Activity extends AppCompatActivity {
                 //double Tp = 0.6 * Tc;
                 volume = D*B* DX;
                 //txtHasil.setText("Volume Tampung : " + volume);
-                namaValue.setText(""+volume);
+                String volumekoma3 = precision.format(volume);
+                namaValue.setText(""+volumekoma3);
                // Bundle d = new Bundle();
                 /*d.putString("ProfilMukaAirD", String.valueOf(D));
                 d.putString("ProfilMukaAirDX", String.valueOf(DX));

@@ -118,7 +118,7 @@ public class Main3Activity extends AppCompatActivity {
                 E1 = y1 + (alpha * ( Math.pow(V,2) / (2 * g) ));
                 y2 = y1 - range;
                 E2 = y2 + (alpha * ( Math.pow(V,2) / 2 * g ));
-                P = brSaluran + ((2 * h) * ( Math.sqrt(1 + Math.pow(m,2)) ) );
+                P = brSaluran + ((2 * h) * ( Math.pow(Math.sqrt(1+m),2 ) ) );//    Math.sqrt(1 + Math.pow(m,2)) ) );
                 R = A / P;
                 Sf = Math.pow( ( (n * debit) / ( A * Math.sqrt(Math.pow(R,2) )) ),2 );
                 B = brSaluran + (2 * m * h) ;
@@ -131,9 +131,9 @@ public class Main3Activity extends AppCompatActivity {
                 String Bkoma3 = precision2.format(B);
                 String DeltaXkoma3 = precision2.format(DeltaX);
 
-                txtHasil.setText("D : "+ Dkoma3+ " m");
-                txtHasil2.setText("B : "+ Bkoma3+ " m");
-                txtHasil3.setText("Delta X : "+ DeltaXkoma3 + " m");
+                txtHasil.setText(Dkoma3+ " m");
+                txtHasil2.setText( Bkoma3+ " m");
+                txtHasil3.setText( DeltaXkoma3 + " m");
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)
                 final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
