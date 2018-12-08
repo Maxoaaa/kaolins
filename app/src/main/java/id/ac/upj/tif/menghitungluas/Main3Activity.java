@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +18,7 @@ public class Main3Activity extends AppCompatActivity {
     Button btnHitung,btnNext;
     FloatingActionButton btn_float,btn_float1,btn_float2,btn_float3;
     EditText txtKedalamanSungai, txtso, txtKoefisienKecepatan, txtKedalamanSungaiHulu, txtTinggiJagaan, txth,txtm,txtrange,txty1;
-
+    private static final String TAG = "Pesan saya";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,9 +107,9 @@ public class Main3Activity extends AppCompatActivity {
                     y1 = Double.parseDouble(txty1.getText().toString());
                 }
                 if (txtrange.getText().toString().isEmpty()){
-                    range = 0 ;
+                    y2 = 0 ;
                 }else {
-                    range = Double.parseDouble(txtrange.getText().toString());
+                    y2 = Double.parseDouble(txtrange.getText().toString());
                 }
                 //y = Double.parseDouble(txtKedalamanSungaiHulu.getText().toString());
                 debit = Double.parseDouble( beva.getString("Debitku"));
@@ -116,11 +117,13 @@ public class Main3Activity extends AppCompatActivity {
                 A = h * (brSaluran + (m*h));
                 V = debit / A ;
                 E1 = y1 + (alpha * ( Math.pow(V,2) / (2 * g) ));
-                y2 = y1 - range;
-                E2 = y2 + (alpha * ( Math.pow(V,2) / 2 * g ));
-                P = brSaluran + ((2 * h) * ( Math.pow(Math.sqrt(1+m),2 ) ) );//    Math.sqrt(1 + Math.pow(m,2)) ) );
+                //y2 = y1 - range;
+                E2 = y2 + (alpha * ( Math.pow(V,2) / (2 * g) ));
+                P = brSaluran + ((2 * h) * ( Math.sqrt(Math.pow(1+m,2))  ) );//    Math.sqrt(1 + Math.pow(m,2)) ) );
                 R = A / P;
-                Sf = Math.pow( ( (n * debit) / ( A * Math.sqrt(Math.pow(R,2) )) ),2 );
+                double temp = (n * debit) / ( A * (Math.sqrt(Math.pow(R,2)) ));
+                Sf = Math.pow( temp ,2 );
+                //Sf = Math.pow( ( (n * debit) / ( A * (R^ (2/3) )) ),2 );
                 B = brSaluran + (2 * m * h) ;
                 D = d + s;
                 DeltaX = (E2 - E1) / (so - Sf);
@@ -134,6 +137,29 @@ public class Main3Activity extends AppCompatActivity {
                 txtHasil.setText(Dkoma3+ " m");
                 txtHasil2.setText( Bkoma3+ " m");
                 txtHasil3.setText( DeltaXkoma3 + " m");
+
+                Log.d(TAG, String.valueOf(d));
+                Log.d(TAG, String.valueOf(n));
+                Log.d(TAG, String.valueOf(brSaluran));
+                Log.d(TAG, String.valueOf(so));
+                Log.d(TAG, String.valueOf(alpha));
+                Log.d(TAG, String.valueOf(s));
+                Log.d(TAG, String.valueOf(h));
+                Log.d(TAG, String.valueOf(m));
+                Log.d(TAG, String.valueOf(y1));
+                Log.d(TAG, String.valueOf(y2));
+                Log.d(TAG, String.valueOf(debit));
+                Log.d(TAG, String.valueOf(A));
+                Log.d(TAG, String.valueOf(V));
+                Log.d(TAG, String.valueOf(E1));
+                Log.d(TAG, "E2: "+String.valueOf(E2));
+                Log.d(TAG, String.valueOf(P));
+                Log.d(TAG, String.valueOf(R));
+                Log.d(TAG, String.valueOf("temp : "+temp));
+                Log.d(TAG, String.valueOf(Sf));
+
+
+
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)
                 final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
