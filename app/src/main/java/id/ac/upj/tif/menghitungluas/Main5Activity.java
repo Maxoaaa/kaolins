@@ -3,7 +3,6 @@ package id.ac.upj.tif.menghitungluas;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.DocumentsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -14,11 +13,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import id.ac.upj.tif.menghitungluas.penjelasan.Debit_banjir;
 import id.ac.upj.tif.menghitungluas.penjelasan.Intensitas_hujan;
+import id.ac.upj.tif.menghitungluas.penjelasan.Metode_Gumbel;
 import id.ac.upj.tif.menghitungluas.penjelasan.Profil_muka_air;
 import id.ac.upj.tif.menghitungluas.penjelasan.Rerata_hujan;
 import id.ac.upj.tif.menghitungluas.penjelasan.Volume_tampung;
@@ -29,7 +27,7 @@ public class Main5Activity extends AppCompatActivity
         Penjelasan.OnFragmentInteractionListener,
         Tentang.OnFragmentInteractionListener,
         Intensitas_hujan.OnFragmentInteractionListener,
-        Rerata_hujan.OnFragmentInteractionListener,
+        Metode_Gumbel.OnFragmentInteractionListener,
         Debit_banjir.OnFragmentInteractionListener,
         Profil_muka_air.OnFragmentInteractionListener,
         Volume_tampung.OnFragmentInteractionListener{
@@ -101,12 +99,12 @@ public class Main5Activity extends AppCompatActivity
         Class fragmentClass = null;
         if (id == R.id.nav_hitung) {
             fragmentClass = Penjelasan.class;
-            Intent intent = new Intent(Main5Activity.this, Main6Activity.class);
+            Intent intent = new Intent(Main5Activity.this, Main6aActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_intenhu) {
             fragmentClass = Intensitas_hujan.class;
-        } else if (id == R.id.nav_rerata_hujan) {
-            fragmentClass = Rerata_hujan.class;
+        } else if (id == R.id.nav_gumbel) {
+            fragmentClass = Metode_Gumbel.class;
         } else if (id == R.id.nav_banjir) {
             fragmentClass = Debit_banjir.class;
         } else if (id == R.id.nav_profil) {

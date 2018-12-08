@@ -25,7 +25,11 @@ public class Main3Activity extends AppCompatActivity {
 
         final Bundle beva = getIntent().getExtras();
         TextView debit =  findViewById(R.id.namaValue);
-        debit.setText(beva.getCharSequence("Debitku")+" m3/s");
+        final DecimalFormat precision2 = new DecimalFormat("#.###");
+        String abc =beva.getString("Debitku");
+        final Double abe = Double.valueOf(beva.getString("Debitku"));
+        String abd = precision2.format(Double.parseDouble(abc));
+        debit.setText(abd+" m3/s");
 
         txtKedalamanSungai = findViewById(R.id.txtKedalamanSungai);
         txtManning = findViewById(R.id.txtManning);
@@ -123,12 +127,13 @@ public class Main3Activity extends AppCompatActivity {
                 //S = V / 9;
                 S = Math.cbrt( V / ( (1/n) * Math.sqrt(Math.pow(R,2)) ) );
 
+                String Dkoma3 = precision2.format(D);
+                String Bkoma3 = precision2.format(B);
+                String DeltaXkoma3 = precision2.format(DeltaX);
 
-                //Qc1 = 5.555555555555555555555555;
-
-                txtHasil.setText("D : "+ D+ " m");
-                txtHasil2.setText("B : "+ B+ " m");
-                txtHasil3.setText("Delta X : "+ DeltaX + " m");
+                txtHasil.setText("D : "+ Dkoma3+ " m");
+                txtHasil2.setText("B : "+ Bkoma3+ " m");
+                txtHasil3.setText("Delta X : "+ DeltaXkoma3 + " m");
                 DecimalFormat precision = new DecimalFormat("#.#################################");
                 //untuk menyimpan data di activity (bundle)
                 final Intent intent = new Intent(getApplicationContext(), Main4Activity.class);
@@ -140,7 +145,7 @@ public class Main3Activity extends AppCompatActivity {
                 //String hasil2 = new Double(H).toString();
                 e.putString("ProfilMukaAirD", hasil1);
                 e.putString("ProfilMukaAirDX", hasil2);
-                e.putString("ProfilMukaAirB", beva.getString("Debitku"));
+                e.putString("ProfilMukaAirB", hasil3);
                 //e.putString("Debitku", hasil3);
                 //e.putString("Haha", hasil2);
                 intent.putExtras(e);

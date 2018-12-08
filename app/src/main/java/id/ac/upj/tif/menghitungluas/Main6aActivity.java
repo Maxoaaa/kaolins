@@ -31,7 +31,7 @@ public class Main6aActivity extends AppCompatActivity {
         btn_float = findViewById(R.id.btn_float);
         btn_float5 = findViewById(R.id.btn_float5);
 
-        final Bundle bave = getIntent().getExtras();
+        //final Bundle bave = getIntent().getExtras();
         txtX1 =  findViewById(R.id.txtX1);
         txtX2 =  findViewById(R.id.txtX2);
         txtX3 =  findViewById(R.id.txtX3);

@@ -486,8 +486,8 @@
                     android:padding="5dp">
 
                     <TextView
-                        android:layout_width="87dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="62dp"
+                        android:layout_height="50dp"
                         android:gravity="center"
                         android:text="Periode Ulang (Tahun)"
                         tools:ignore="HardcodedText" />
@@ -496,7 +496,6 @@
                         android:layout_width="35dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:padding="5dp"
                         android:text="Ktr"
                         tools:ignore="HardcodedText" />
 
@@ -504,7 +503,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:gravity="center"
-                        android:padding="5dp"
                         android:text="X bar"
                         tools:ignore="HardcodedText" />
 
@@ -528,7 +526,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -541,8 +539,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -573,7 +571,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -586,8 +584,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -618,7 +616,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -632,8 +630,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -665,7 +663,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -678,8 +676,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -687,8 +685,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -696,8 +694,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -714,10 +712,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="36dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/_50" />
@@ -727,8 +725,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -760,7 +758,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -773,8 +771,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -805,7 +803,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -818,8 +816,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView
@@ -850,7 +848,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#ECEFF1"
-                    android:padding="5dp">
+                    android:padding="2dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -863,8 +861,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
                         android:text="@string/_0" />
 
                     <TextView

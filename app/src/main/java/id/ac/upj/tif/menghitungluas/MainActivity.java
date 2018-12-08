@@ -23,10 +23,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        final DecimalFormat precision = new DecimalFormat("#.###");
         final Bundle bave = getIntent().getExtras();
         txtCurah =  findViewById(R.id.txtCurah);
-        txtCurah.setText(bave.getCharSequence("Rerata_hujan"));
+        String abc =bave.getString("Rerata_hujan");
+        final Double abe = Double.valueOf(bave.getString("Rerata_hujan"));
+        String abd = precision.format(Double.parseDouble(abc));
+        txtCurah.setText(abd);
 
         btn_float = findViewById(R.id.btn_float);
         txtHasil = findViewById(R.id.txtHasil);
@@ -91,11 +94,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                double a,b,h,R,tc;
 
-                if (txtCurah.getText().toString().isEmpty()){
-                    R = 0 ;
-                }else {
-                    R = Double.parseDouble(txtCurah.getText().toString());
-                }
+                   // R = Double.valueOf(txtCurah.getText().toString());
+                    R=abe;
                 if (txtWaktu.getText().toString().isEmpty()){
                     tc = 0 ;
                 }else {
@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
                 h = Math.pow(b,2);
                 double y = Math.cbrt(h);
                 double x = a*y;
-
-                txtHasil.setText("Intensitas Hujan : " + x+" mm/jam");
+                    String xkoma3 = precision.format(x);
+                txtHasil.setText("Intensitas Hujan : " + xkoma3+" mm/jam");
 
                     tc1.setText(Integer.toString(1));
                     tc2.setText(Integer.toString(2));
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                     hhh[i]= Double.valueOf(j+=1);
                     xax[i] = (R/24) * Math.cbrt(Math.pow((24/(hhh[i])),2));
                 }
-                DecimalFormat precision = new DecimalFormat("#.#####");
+
                // ih1.setText(precision.format(xax[1]));
                 ih1.setText(precision.format(xax[0]));
                 ih2.setText(precision.format(xax[1]));

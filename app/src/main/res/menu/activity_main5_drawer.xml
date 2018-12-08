@@ -15,9 +15,9 @@
             android:title="Intensitas Hujan"
             tools:ignore="HardcodedText" />
         <item
-            android:id="@+id/nav_rerata_hujan"
+            android:id="@+id/nav_gumbel"
             android:icon="@drawable/ic_assessment_black_24dp"
-            android:title="Rata-Rata Curah Hujan"
+            android:title="Distribusi Gumbel"
             tools:ignore="HardcodedText" />
         <item
             android:id="@+id/nav_banjir"

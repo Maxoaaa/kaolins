@@ -11,11 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Spinner;
 
+import java.text.DecimalFormat;
+
 
 public class Main2Activity extends AppCompatActivity {
     TextView txtHasil;
     EditText txtLuas,txtLs,txtLt;
-    Button btnHitung;
+    Button btnHitung,btnNext;
     FloatingActionButton btn_float;
     Spinner spinner;
 
@@ -26,10 +28,13 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
+        final DecimalFormat precision = new DecimalFormat("#.###");
         final Bundle b = getIntent().getExtras();
         TextView intensitas =  findViewById(R.id.namaValue);
-        intensitas.setText(b.getCharSequence("Intensitasku"));
+        String abc =b.getString("Intensitasku");
+        final Double abe = Double.valueOf(b.getString("Intensitasku"));
+        String abd = precision.format(Double.parseDouble(abc));
+        intensitas.setText(abd);
 
         final Spinner spinner =  findViewById(R.id.spinner);
         txtHasil = findViewById(R.id.txtHasil);
@@ -37,6 +42,7 @@ public class Main2Activity extends AppCompatActivity {
         //txtLs = findViewById(R.id.txtLs);
         //txtLt = findViewById(R.id.txtLt);
         btnHitung = findViewById(R.id.btnHitung);
+        btnNext = findViewById(R.id.btnNext);
         btn_float = findViewById(R.id.btn_float);
 
         //String jalur = spinner.getSelectedItem().toString();
@@ -52,7 +58,7 @@ public class Main2Activity extends AppCompatActivity {
                     A = Double.parseDouble(txtLuas.getText().toString());
                 }
 
-                intensitas = Double.parseDouble( b.getString("Intensitasku"));
+                intensitas = abe;
                 C = Double.parseDouble(spinner.getSelectedItem().toString());
                 //Ls = Double.parseDouble(txtLs.getText().toString());
                 //Lt = Double.parseDouble(txtLt.getText().toString());
@@ -68,9 +74,10 @@ public class Main2Activity extends AppCompatActivity {
                 //Cs = (2 * tc) / ((2 * tc )+ td);
 
                 Qs = 0.278 * C * intensitas *  A;
-                txtHasil.setText("Debit Banjir Maks: " +Qs+" m³/s");
+                String Qskoma3 = precision.format(Qs);
+                txtHasil.setText("Debit Banjir Maks: " +Qskoma3+" m³/s");
 
-                Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
+                final Intent intent = new Intent(getApplicationContext(), Main3Activity.class);
                 //Intent intentv2 = new Intent(getApplicationContext(), Main2Activity.class);
                 //Intent koefisi = new Intent(getApplicationContext(), Main4Activity.class);
                 Bundle d = new Bundle();
@@ -83,7 +90,12 @@ public class Main2Activity extends AppCompatActivity {
                 intent.putExtras(d);
                 //intentv2.putExtras(d);
                 //memulai Activity ketiga
-                startActivity(intent);
+                btnNext.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
