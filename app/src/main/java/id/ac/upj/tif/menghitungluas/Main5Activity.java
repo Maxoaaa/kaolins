@@ -12,6 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import id.ac.upj.tif.menghitungluas.penjelasan.Debit_banjir;
@@ -69,7 +70,7 @@ public class Main5Activity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-    /* untuk membuat menu titik 3 di pojok kanan atas
+    //untuk membuat menu titik 3 di pojok kanan atas
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.
@@ -89,7 +90,7 @@ public class Main5Activity extends AppCompatActivity
                 }
                 return super.onOptionsItemSelected(item);
             }
-        */
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

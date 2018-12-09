@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -121,7 +123,11 @@ public class Main3Activity extends AppCompatActivity {
                 E2 = y2 + (alpha * ( Math.pow(V,2) / (2 * g) ));
                 P = brSaluran + ((2 * h) * ( Math.sqrt(Math.pow(1+m,2))  ) );//    Math.sqrt(1 + Math.pow(m,2)) ) );
                 R = A / P;
-                double temp = (n * debit) / ( A * (Math.sqrt(Math.pow(R,2)) ));
+                double temp = (n * debit) / ( A * (Math.cbrt(Math.pow(R,2)) ));
+/*                double temp1 = n * debit;
+                double temp3 = Math.pow(R,2) ;
+                double temp4 =  Math.sqrt(Math.pow(R,2)) ;
+                double temp2 =  A * (Math.sqrt(Math.pow(R,2)) );*/
                 Sf = Math.pow( temp ,2 );
                 //Sf = Math.pow( ( (n * debit) / ( A * (R^ (2/3) )) ),2 );
                 B = brSaluran + (2 * m * h) ;
@@ -137,7 +143,7 @@ public class Main3Activity extends AppCompatActivity {
                 txtHasil.setText(Dkoma3+ " m");
                 txtHasil2.setText( Bkoma3+ " m");
                 txtHasil3.setText( DeltaXkoma3 + " m");
-
+/*
                 Log.d(TAG, String.valueOf(d));
                 Log.d(TAG, String.valueOf(n));
                 Log.d(TAG, String.valueOf(brSaluran));
@@ -155,8 +161,15 @@ public class Main3Activity extends AppCompatActivity {
                 Log.d(TAG, "E2: "+String.valueOf(E2));
                 Log.d(TAG, String.valueOf(P));
                 Log.d(TAG, String.valueOf(R));
-                Log.d(TAG, String.valueOf("temp : "+temp));
-                Log.d(TAG, String.valueOf(Sf));
+                Log.d(TAG, String.valueOf("temp : "+temp));//temp = (n * debit) / ( A * (Math.sqrt(Math.pow(R,2)) ));
+                Log.d(TAG, String.valueOf("temp1 : "+temp1)); //temp1 = n * debit;
+                Log.d(TAG, String.valueOf("temp2 : "+temp2)); //temp2 =  A * (Math.sqrt(Math.pow(R,2)) );
+                Log.d(TAG, String.valueOf("temp3 : "+temp3)); //temp3 = Math.pow(R,2) ;
+                Log.d(TAG, String.valueOf("temp4 : "+temp4)); // temp4 =  Math.sqrt(Math.pow(R,2)) ;
+                Log.d(TAG, String.valueOf("temp5 : "+Math.pow(27,2))); // temp4 =  Math.sqrt(Math.pow(R,2)) ;
+                Log.d(TAG, String.valueOf("temp5 : "+Math.cbrt(Math.pow(27,2)))); // temp4 =  Math.sqrt(Math.pow(R,2)) ;
+                Log.d(TAG, String.valueOf("temp5 : "+Math.pow(27,0.66666666666666666666))); // temp4 =  Math.sqrt(Math.pow(R,2)) ;
+                Log.d(TAG, String.valueOf(Sf));*/
 
 
 
@@ -252,6 +265,25 @@ public class Main3Activity extends AppCompatActivity {
                 dialog.show();
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main5, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

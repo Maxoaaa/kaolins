@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,10 +23,26 @@ public class Main6aActivity extends AppCompatActivity {
     TextView hasilAveX,hasilAveX1, hasilKtr,hasilSd,hasilXtr;
     FloatingActionButton btn_float,btn_float5;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6a);
+// findview toolbar
+       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+// set toolbar ke dalam support action bar
+      //  setSupportActionBar(toolbar);
+// enable home button untuk navigasi
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+// mengeset icon untuk home button Toolbar
+        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_info_black_24dp);
+// mengeset title/nama aplikasi
+        //getSupportActionBar().setTitle("TWOH's Engineering");
+// mengeset subtitle
+        //getSupportActionBar().setSubtitle("Tutorial Material Design");
+// set logo toolbar
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //getSupportActionBar().setLogo(R.mipmap.ic_launcher);
 
         btnNext = findViewById(R.id.btnNext);
         btnHitung3 = findViewById(R.id.btnHitung3);
@@ -259,5 +279,25 @@ public class Main6aActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main5, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

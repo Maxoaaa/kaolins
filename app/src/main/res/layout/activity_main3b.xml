@@ -429,7 +429,7 @@
                     <TextView
                         android:layout_width="135dp"
                         android:layout_height="42dp"
-                        android:text="y (Pengukuran Langsung)"
+                        android:text="y1 (Pengukuran Langsung)"
                         android:textSize="16sp"
                         tools:ignore="HardcodedText" />
 
@@ -469,9 +469,9 @@
                     android:padding="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="131dp"
                         android:layout_height="wrap_content"
-                        android:text="Range y1 ke y2"
+                        android:text="y2 (pengukuran langsung)"
                         android:textSize="18sp"
                         tools:ignore="HardcodedText" />
 
