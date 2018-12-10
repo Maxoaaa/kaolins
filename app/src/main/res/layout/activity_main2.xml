@@ -34,22 +34,41 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp">
 
             <TextView
                 android:layout_width="130dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="I (Intensitas Hujan)  "
                 android:textSize="18sp"
                 tools:ignore="HardcodedText" />
 
-            <TextView
+            <!--            <TextView
                 android:id="@+id/namaValue"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:text="hasil "
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText" />-->
+
+            <LinearLayout
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <EditText
+                    android:id="@+id/namaValue"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView16"
@@ -75,7 +94,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="3dp"
                 android:background="@drawable/border"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="2dp">
 
                 <EditText
                     android:id="@+id/txtLuas"

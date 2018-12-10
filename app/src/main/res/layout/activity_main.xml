@@ -33,7 +33,6 @@
                 android:id="@+id/txtCurah"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:enabled="false"
                 android:hint="Contoh: 329.614"
                 android:inputType="number|numberDecimal"
                 tools:ignore="Autofill,HardcodedText,LabelFor" />
@@ -148,7 +147,7 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tc (dalam satuan menit)"
+            android:text="R dapat dipilih dari tabel periode ulang dikolom Xtr"
             tools:ignore="HardcodedText" />
 
     </LinearLayout>

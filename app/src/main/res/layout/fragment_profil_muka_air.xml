@@ -55,7 +55,9 @@ tools:context=".penjelasan.Profil_muka_air">
             android:layout_weight="1"
             android:contentDescription="keterangan"
             android:src="@drawable/keterangan"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:layout_marginEnd="8dp" />
+
     </LinearLayout>
 
     <TextView
@@ -64,15 +66,26 @@ tools:context=".penjelasan.Profil_muka_air">
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/backWater_deskripsi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:contentDescription="keterangan"
+        android:src="@drawable/d_backwater_contoh"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:layout_width="match_parent"
