@@ -122,6 +122,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="number|numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -158,6 +159,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="number|numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -193,6 +195,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="number|numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -228,6 +231,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -263,6 +267,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -305,6 +310,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -341,6 +347,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="Autofill,InefficientWeight,LabelFor" />
 
                         </LinearLayout>
@@ -376,6 +383,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -411,6 +419,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -446,6 +455,7 @@
                                 android:gravity="center"
                                 android:hint="@string/titik2"
                                 android:inputType="numberDecimal"
+                                android:textSize="10sp"
                                 tools:ignore="InefficientWeight" />
 
                         </LinearLayout>
@@ -597,8 +607,8 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
-                    android:gravity="center"
-                    android:text="Xi - Average X  :"
+                    android:paddingLeft="5dp"
+                    android:text="Xi - X̄  :"
                     android:textSize="16sp" />
 
                 <LinearLayout

@@ -57,7 +57,8 @@ tools:context=".penjelasan.Profil_muka_air">
             android:layout_weight="1"
             android:contentDescription="keterangan"
             android:src="@drawable/keterangan"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:layout_marginStart="5dp" />
 
     </LinearLayout>
 
