@@ -10,9 +10,9 @@
     -->
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/logo_icon2"
+        android:icon="@mipmap/logo_icon3"
         android:label="iVolos"
-        android:roundIcon="@mipmap/logo_icon2_round"
+        android:roundIcon="@mipmap/logo_icon3_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
